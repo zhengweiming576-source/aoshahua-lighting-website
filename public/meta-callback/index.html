@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Meta OAuth callback · AOSHAHUA AI Marketing Center</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230B0908'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='38' fill='%23C6A15B' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --bg: #fbf8f1;
+        --surface: #ffffff;
+        --ink: #1f170b;
+        --fg: #241d11;
+        --muted: #8a7a5b;
+        --accent: #9a7830;
+        --accent-bright: #c9a45e;
+        --accent-hi: #b18b3e;
+        --line: #e3d6b9;
+        --radius-card: 8px;
+        --font-display: 'Didot', 'Bodoni MT', 'Bodoni 72', Georgia, 'Times New Roman', serif;
+        --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        --shadow-md: 0 24px 60px rgba(84, 66, 28, 0.13);
+        --focus: 0 0 0 4px rgba(154, 120, 48, 0.22);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(24px, 6vw, 64px);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.65;
+        color: var(--fg);
+        background: var(--bg);
+      }
+      .meta-callback__card {
+        width: min(620px, 100%);
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-card);
+        box-shadow: var(--shadow-md);
+        padding: clamp(28px, 5vw, 48px);
+        text-align: center;
+      }
+      .meta-callback__mark {
+        display: block;
+        width: 52px;
+        height: 52px;
+        margin: 0 auto 20px;
+        border-radius: 10px;
+        background: #0b0908;
+        color: #c6a15b;
+        font-family: var(--font-display);
+        font-size: 30px;
+        line-height: 52px;
+        text-align: center;
+      }
+      .meta-callback__eyebrow {
+        margin: 0 0 14px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #7e5f24;
+      }
+      .meta-callback__title {
+        margin: 0;
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: clamp(21px, 2.6vw, 28px);
+        line-height: 1.28;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+      }
+      .meta-callback__note {
+        margin: 18px 0 0;
+        font-size: 14.5px;
+        color: var(--muted);
+      }
+      .meta-callback__link {
+        display: inline-block;
+        margin-top: 26px;
+        padding: 14px 26px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        background: var(--accent-bright);
+        color: #241a08;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        text-decoration: none;
+      }
+      .meta-callback__link:hover { background: var(--accent-hi); }
+      .meta-callback__link:focus-visible { outline: none; box-shadow: var(--focus); }
+      .meta-callback__spinner {
+        display: block;
+        width: 22px;
+        height: 22px;
+        margin: 26px auto 0;
+        border: 2px solid var(--line);
+        border-top-color: var(--accent);
+        border-radius: 50%;
+        animation: meta-callback-spin 0.9s linear infinite;
+      }
+      @keyframes meta-callback-spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) {
+        .meta-callback__spinner { animation-duration: 2.4s; }
+      }
+      /* Only one of the two states is ever shown. Without JavaScript the page
+         falls back to the informational "ready" state. */
+      .meta-callback__panel--returning { display: none; }
+      html[data-meta-oauth='yes'] .meta-callback__panel--ready { display: none; }
+      html[data-meta-oauth='yes'] .meta-callback__panel--returning { display: block; }
+    </style>
+    <script>
+      /* Read the OAuth response parameters from this page's own URL as early as
+         possible and build the matching local callback URL.
+
+         Meta returns either ?code=...&state=... on success or
+         ?error=...&error_description=... on failure; both must be forwarded
+         verbatim so the desktop app can read them.
+
+         A bare visit with none of those parameters is NOT handed off - the page
+         just explains what it is for, so an accidental visit never ends up on a
+         dead localhost address. The data-meta-oauth flag is set here, in <head>,
+         so the correct state is painted on the very first frame. */
+      window.__metaCallback = (function () {
+        var LOCAL_CALLBACK = 'http://127.0.0.1:8765/meta/callback';
+        var OAUTH_KEYS = ['code', 'state', 'error', 'error_description'];
+        var search = window.location.search || '';
+        var params = new URLSearchParams(search);
+        var hasOAuthParams = false;
+        for (var i = 0; i < OAUTH_KEYS.length; i += 1) {
+          if (params.has(OAUTH_KEYS[i])) hasOAuthParams = true;
+        }
+
+        document.documentElement.setAttribute('data-meta-oauth', hasOAuthParams ? 'yes' : 'no');
+
+        return {
+          localCallback: LOCAL_CALLBACK,
+          search: search,
+          code: params.get('code'),
+          state: params.get('state'),
+          error: params.get('error'),
+          errorDescription: params.get('error_description'),
+          hasOAuthParams: hasOAuthParams,
+          target: LOCAL_CALLBACK + search
+        };
+      })();
+    </script>
+  </head>
+  <body>
+    <main class="meta-callback__card">
+      <span class="meta-callback__mark" aria-hidden="true">A</span>
+      <p class="meta-callback__eyebrow">AOSHAHUA AI Marketing Center</p>
+
+      <div class="meta-callback__panel meta-callback__panel--ready">
+        <h1 class="meta-callback__title">Meta OAuth callback is ready.</h1>
+        <p class="meta-callback__note">
+          This page will return authorization results to AOSHAHUA AI Marketing Center when
+          Facebook authorization is completed.
+        </p>
+      </div>
+
+      <div class="meta-callback__panel meta-callback__panel--returning">
+        <h1 class="meta-callback__title" id="meta-callback-status">
+          Facebook authorization received. Returning to AOSHAHUA AI Marketing Center...
+        </h1>
+        <p class="meta-callback__note">
+          If your browser blocks the automatic return, use the button below to continue.
+        </p>
+        <a
+          class="meta-callback__link"
+          id="meta-callback-link"
+          href="http://127.0.0.1:8765/meta/callback"
+          rel="noopener"
+        >
+          Return to AOSHAHUA AI Marketing Center
+        </a>
+        <span class="meta-callback__spinner" aria-hidden="true"></span>
+      </div>
+    </main>
+
+    <script>
+      /* Hand the authorization result back to the desktop app ONLY when Meta
+         actually returned one. Give the browser one paint first so the status
+         message is really visible. */
+      (function () {
+        var mc = window.__metaCallback || {
+          hasOAuthParams: false,
+          target: 'http://127.0.0.1:8765/meta/callback' + (window.location.search || '')
+        };
+        if (!mc.hasOAuthParams) return;
+
+        document.title = 'Facebook authorization · AOSHAHUA AI Marketing Center';
+
+        var link = document.getElementById('meta-callback-link');
+        if (link) link.setAttribute('href', mc.target);
+
+        var done = false;
+        function handoff() {
+          if (done) return;
+          done = true;
+          window.location.replace(mc.target);
+        }
+        window.setTimeout(handoff, 300);
+        /* Fallback for browsers that defer timers until first paint. */
+        window.addEventListener('pageshow', handoff);
+      })();
+    </script>
+  </body>
+</html>

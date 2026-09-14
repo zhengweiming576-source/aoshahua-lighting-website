@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>澳沙华网站 · 内容编辑器</title>
+<style>
+:root{ --bg:#f6f1e6; --card:#ffffff; --ink:#241a0c; --muted:#8a7a5b; --line:#e4d8bc; --gold:#9a7830; --gold2:#c9a45e; }
+*{box-sizing:border-box}
+body{margin:0;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:#221a0c;color:#f6ecd7;padding:12px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:5;flex-wrap:wrap}
+header h1{font-size:17px;margin:0;font-weight:700;letter-spacing:.5px}
+header .sub{font-size:12px;opacity:.75}
+.wrap{display:flex;gap:16px;padding:16px;align-items:flex-start}
+aside{width:240px;flex:0 0 auto;position:sticky;top:74px}
+aside button{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 12px;margin-bottom:6px;font-size:13.5px;cursor:pointer;color:var(--ink)}
+aside button.active{border-color:var(--gold);background:#f3ead6;font-weight:700}
+aside button .cnt{color:var(--muted);font-size:11.5px;font-weight:400}
+main{flex:1;min-width:0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;min-height:72vh}
+.toolbar{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:16px;flex-wrap:wrap}
+.btn{border:1px solid var(--gold);background:#fff;color:#7a5f22;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px}
+.btn.primary{background:var(--gold2);border-color:var(--gold2);color:#241a08;font-weight:700}
+.btn.danger{border-color:#d9b6a0;color:#a3552f}
+.sec-title{font-family:Georgia,serif;font-size:22px;margin:4px 0 6px}
+.hint,.sec-desc{font-size:12.5px;color:var(--muted);margin:2px 0 12px;line-height:1.7}
+.row{display:flex;align-items:flex-start;gap:10px;margin:7px 0;flex-wrap:wrap}
+.row>label{flex:0 0 158px;font-size:12.5px;color:#5a4b2e;padding-top:7px;font-weight:600}
+.row .field{flex:1;min-width:230px}
+input[type=text],input[type=number],textarea,select{width:100%;border:1px solid #d9cbaa;border-radius:7px;padding:7px 9px;font-size:13.5px;font-family:inherit;background:#fffdf7}
+textarea{min-height:58px;resize:vertical}
+input[type=checkbox]{width:18px;height:18px;margin-top:8px}
+.fld-desc{font-size:11.5px;color:var(--muted);margin-top:3px}
+.card{border:1px solid var(--line);border-radius:10px;padding:14px;margin:12px 0;background:#fdfaf2}
+.card h4{margin:0 0 4px;font-size:15px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.card h4 .idx{color:var(--muted);font-size:12px;font-weight:400}
+.cardbar{display:flex;gap:6px;margin:2px 0 8px;flex-wrap:wrap}
+.imgbox{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.imgbox img{width:88px;height:88px;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:#f3ecdd}
+.smallbtn{border:1px solid #cfbf9b;background:#fff;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;color:#6a5a33}
+.smallbtn.danger{color:#a3552f;border-color:#d9b6a0}
+.actions{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.badge{padding:2px 8px;border-radius:10px;font-size:12px}
+.badge.dirty{background:#f6e3c0;color:#7a5f22}
+.toast{position:fixed;right:20px;bottom:20px;background:#241a0c;color:#f6ecd7;padding:10px 18px;border-radius:8px;font-size:13.5px;opacity:0;transition:opacity .25s;pointer-events:none}
+.toast.show{opacity:1}
+.sec-desc{background:#f6efdd;border:1px dashed var(--gold);border-radius:8px;padding:10px 14px;color:#6a5b3c}
+.ghost{color:#c9bd9f;font-size:11.5px}
+.searchbar{background:#f6efdd;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin:2px 0 14px}
+.searchbar h5{margin:0 0 8px;font-size:13px;color:#7a5f22;letter-spacing:.5px}
+.searchrow{display:flex;align-items:center;gap:10px;margin:7px 0;flex-wrap:wrap}
+.searchrow label{flex:0 0 74px;font-size:12.5px;font-weight:600;color:#5a4b2e}
+.searchrow input{flex:1;min-width:200px}
+.searchmeta{display:flex;align-items:center;gap:12px;margin-top:8px;font-size:12px;color:#7a6a45;flex-wrap:wrap}
+.searchmeta .hit{font-weight:700;color:#7a5f22;font-size:13px}
+/* 产品列表分页：默认每页 10 个，可切 10/20/30/40/50 */
+.pagerrow{display:flex;align-items:center;gap:10px;margin-top:10px;padding-top:10px;border-top:1px dashed #dccfae;flex-wrap:wrap;font-size:12.5px;color:#7a6a45}
+.pagerrow .pinfo{font-weight:600;color:#5a4b2e}
+.pagerrow .pinfo b{color:#7a5f22}
+.pagerrow select{border:1px solid #cfbf9b;background:#fff;border-radius:6px;padding:5px 8px;font-size:12px;color:#6a5a33;font-family:inherit;cursor:pointer}
+.pagerrow button[disabled]{opacity:.45;cursor:not-allowed}
+/* 产品管理区的「＋ 添加一项」挪到列表最上面（搜索框下方），拉通一行更显眼 */
+.btn.addon-top{display:block;width:100%;margin:2px 0 14px}
+/* 每个产品的「前台摆放位置」一行 */
+.placerow{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:12px;color:#7a6a45;
+  margin:0 0 12px;padding:8px 10px;border:1px dashed #dccfae;border-radius:8px;background:#fdfaf1}
+.placerow .pinfo{font-weight:600;color:#5a4b2e}
+.placerow .pinfo b{color:#7a5f22}
+.placerow .slotnum{width:62px;border:1px solid #cfbf92;border-radius:6px;padding:4px 6px;
+  font-size:12.5px;font-family:inherit;background:#fff;color:#3d3218}
+.placerow .smallbtn{background:#fff}
+@media(max-width:860px){ .wrap{flex-direction:column} aside{width:100%;position:static;display:flex;flex-wrap:wrap;gap:6px} aside button{width:auto} }
+</style>
+</head>
+<body>
+<header>
+  <h1>澳沙华网站 · 内容编辑器</h1>
+  <span class="sub">改文字 / 换图片 / 保存 → npm run dev 预览 → 请 AI 助手发布</span>
+</header>
+<div class="wrap">
+  <aside id="nav"></aside>
+  <main>
+    <div class="toolbar">
+      <button class="btn primary" id="saveBtn">💾 保存全部修改</button>
+      <button class="btn" id="reloadBtn">重新载入(放弃未保存)</button>
+      <span id="dirtyBadge"></span>
+      <span style="margin-left:auto;font-size:12px;color:#8a7a5b">保存位置：src/content.json</span>
+    </div>
+    <div class="sec-desc" id="secDesc"></div>
+    <div id="body"></div>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+const $ = (s) => document.querySelector(s);
+let state = null;
+let current = null;
+let dirty = false;
+let imgCache = {};
+const DIRS = ['products', 'factory', 'logo'];
+const TITLE_KEYS = ['name', 'title', 'label', 'caption'];
+
+const KEY_LABELS = {
+  CONTACT:'联系与联系方式', NAV:'顶部导航', ANNOUNCEMENT:'顶部公告条', CATALOG:'产品区标题与导语',
+  SERIES:'分类标签', PRODUCTS:'产品管理', FACTORY:'车间与展会图片', COMPANY_LEAD:'公司简介段落',
+  info:'车间信息块(右下角深色卡)',
+  WHY:'六大优势', PROCESS:'合作流程', MOQ_NOTE:'起批量提示条',
+  phoneDisplay:'电话(显示)', phoneHref:'电话链接', email:'邮箱', emailHref:'询盘邮件模板', wechat:'微信号',
+  storeUrl:'1688链接', storeLabel:'1688按钮文字', addressLine1:'地址第一行', addressLine2:'地址第二行',
+  legalName:'工商注册名称', label:'文字', href:'跳转目标', eyebrow:'眉题小字', title:'大标题', lede:'导语文字',
+  heading:'区块标题', note:'区块说明', desc:'说明文字', summary:'一句话介绍',
+  priceFrom:'参考价 From ¥(留空=不显示)', moq:'起批量(件)',
+  image:'主图', hover:'悬停副图', gallery:'图集(更多展示图)', id:'编号(勿改)', name:'名称', model:'型号(可留空)', series:'所属系列',
+  marble:'属于大理石系列?', icon:'图标', src:'图片', alt:'无障碍说明文字', caption:'图下小标签',
+  qty:'数量(件)', price:'单价(¥)', facts:'规格要点(每行一条)', mark:'大字数字(如 1500 m²)',
+  PROJECT_CASES:'项目案例管理', slug:'链接编号 slug(英文小写-连字符,勿留空)', category:'分类(前台小字眉题)',
+  place:'位置/场景(卡片小字)', client:'客户', year:'年份', location:'地点', overview:'项目概览段落', specs:'项目规格项',
+};
+const TOP_DESC = {
+  CONTACT:'电话、邮箱、微信、1688链接、地址、公司注册名。',
+  NAV:'顶部导航菜单文字与跳转位置。',
+  ANNOUNCEMENT:'页面最顶部深色公告条的一句话。',
+  CATALOG:'产品区最上方的小字眉题、大标题和导语。',
+  SERIES:'产品筛选按钮的标签(一般不修改)。',
+  PRODUCTS:'全部产品：改名称/价格/起批量/型号/规格与图片都在这里。',
+  FACTORY:'公司区块图片墙：车间4图+原车间图，以及展会3图。每张可改小标签与说明、可上传替换。',
+  COMPANY_LEAD:'公司区块顶部整段公司简介(一段话)。',
+  WHY:'“为什么选我们”6张卖点卡：标题+说明。',
+  PROCESS:'“合作流程”四步：标题+说明。',
+  MOQ_NOTE:'产品网格上方“50件起批”提示整段话。',
+  PROJECT_CASES:'全部项目案例。主页 Project cases 固定只显示前4个；其余进“View all projects”目录页。可增删改、换图、上传新图。',
+};
+function zh(key){ return KEY_LABELS[key] || key; }
+function toast(m, ms){ const t=$('#toast'); t.textContent=m; t.classList.add('show'); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('show'), ms||2600); }
+function setDirty(v){ dirty=v; $('#dirtyBadge').innerHTML=v?'<span class="badge dirty">● 有未保存修改</span>':''; }
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+async function getJSON(u){ const r=await fetch(u); if(!r.ok) throw new Error('请求失败 '+r.status); return r.json(); }
+async function imgList(dir){ if(!imgCache[dir]){ try{ imgCache[dir]=(await getJSON('/api/imglist/'+dir)).files; }catch(e){ imgCache[dir]=[]; } } return imgCache[dir]; }
+function num(x){ const n=Number(x); return (!Number.isNaN(n)&&String(x).trim()!=='')?n:x; }
+const toPath=(s)=>String(s).split('.').map(num);
+function getPath(p){ let o=state; for(const k of p){ if(o==null) return undefined; o=o[k]; } return o; }
+function setPath(p,v){ let o=state; for(let i=0;i<p.length-1;i++){ if(o[p[i]]==null) o[p[i]]={}; o=o[p[i]]; } o[p[p.length-1]]=v; }
+function delPath(p){ let o=state; for(let i=0;i<p.length-1;i++){ o=o[p[i]]; if(o==null) return; } const last=p[p.length-1]; if(Array.isArray(o)) o.splice(last,1); else delete o[last]; }
+function tplFor(path){ const key=path[path.length-1];
+  if(key==='PRODUCTS') return {id:'',name:'新产品',series:'chandelier',marble:false,model:'',summary:'',facts:[''],priceFrom:null,moq:50,tiers:[],image:'',hover:'',gallery:[],storeUrl:''};
+  if(key==='NAV') return {label:'页面',href:'#products'};
+  if(key==='SERIES') return {id:'new',label:'新分类'};
+  if(key==='WHY') return {title:'新卖点标题',desc:'说明…',icon:'factory'};
+  if(key==='PROCESS') return {title:'步骤标题',desc:'说明…',image:''};
+  if(key==='images') return {src:'',alt:'',caption:''};
+  if(key==='tiers') return {qty:50,price:0};
+  if(key==='facts') return '';
+  if(key==='overview') return '';
+  if(key==='cases' && path.length===2 && path[0]==='PROJECT_CASES') return newCaseTpl();
+  return {};
+}
+// ---------- fields ----------
+function row(label, inner){ const r=document.createElement('div'); r.className='row'; const l=document.createElement('label'); l.textContent=label; const f=document.createElement('div'); f.className='field'; f.innerHTML=inner; r.append(l,f); return r; }
+function textField(p, value){
+  const last=p[p.length-1]; const long=last==='emailHref'||last==='COMPANY_LEAD'||last==='MOQ_NOTE'||(typeof value==='string'&&value.length>110);
+  const tag=long?'textarea':'input';
+  let html=`<${tag} data-path="${p.join('.')}">`+(long?esc(value||''):'')+(long?`</${tag}>`:'');
+  if(!long) html=`<${tag} type="text" data-path="${p.join('.')}" value="${esc(value)}" />`;
+  return row(zh(last), html);
+}
+function numField(p, value){ return row(zh(p[p.length-1]), `<input type="number" step="any" data-path="${p.join('.')}" data-nullable="1" value="${value==null?'':value}" />`); }
+function boolField(p, value){ return row(zh(p[p.length-1]), `<input type="checkbox" data-path="${p.join('.')}" data-bool="1" ${value?'checked':''} />`); }
+function enumField(p, value, map){ let opts=''; for(const k in map){ opts+=`<option value="${k}" ${String(value)===k?'selected':''}>${map[k]}</option>`; } return row(zh(p[p.length-1]), `<select data-path="${p.join('.')}">${opts}</select>`); }
+function scalarField(p, value){
+  const last=p[p.length-1];
+  if(last==='series') return enumField(p,value,{crystal:'水晶吊灯类',wall:'壁灯类',table:'台灯类',floor:'落地灯类',pendant:'吊灯类',office:'办公照明类',custom:'大型工程定制类',info:'信息位(仅全部显示)'});
+  if(last==='icon') return enumField(p,value,{factory:'工厂',gem:'商标',layers:'数量',badge:'认证',compass:'定制',globe:'出口'});
+  if(typeof value==='number') return numField(p,value);
+  if(typeof value==='boolean') return boolField(p,value);
+  return textField(p, value==null?'':value);
+}
+// ---------- image control ----------
+function dirOf(kind, path){ if(kind==='src') return 'factory'; if(path.includes('PRODUCTS')) return 'products'; return 'products'; }
+async function imageField(p, value){
+  const last=p[p.length-1];
+  const dir = p.includes('PROJECT_CASES') ? 'projects' : (last==='src' ? 'factory' : p.includes('PROCESS') ? 'process' : (p.includes('hover')||last==='image') ? 'products' : 'factory');
+  const base=zh(last); const label=base.endsWith('图')?base:base+'图';
+  const w=document.createElement('div'); w.className='row';
+  const l=document.createElement('label'); l.textContent=label;
+  const f=document.createElement('div'); f.className='field';
+  const box=document.createElement('div'); box.className='imgbox';
+  const img=document.createElement('img'); img.src=(value&&value.startsWith('/assets/'))?value:''; if(!value) img.style.visibility='hidden';
+  const mid=document.createElement('div'); mid.style.cssText='flex:1;min-width:240px';
+  const pathInp=document.createElement('input'); pathInp.type='text'; pathInp.value=value||''; pathInp.dataset.path=p.join('.'); pathInp.placeholder='图片路径（一般用下方按钮选择/上传即可）';
+  const r2=document.createElement('div'); r2.style.cssText='display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;align-items:center';
+  const sel=document.createElement('select'); sel.dataset.pick=p.join('.'); sel.innerHTML='<option value="">— 从现有图片选 —</option>';
+  const files=await imgList(dir); files.forEach(f2=>{ const o=document.createElement('option'); o.value=f2.url; o.textContent=f2.name+' ('+f2.size+'KB)'; if(f2.url===value) o.selected=true; sel.appendChild(o); });
+  const lab=document.createElement('label'); lab.className='smallbtn'; lab.style.cssText='cursor:pointer'; lab.textContent='⬆ 上传新图替换';
+  const file=document.createElement('input'); file.type='file'; file.accept='image/jpeg,image/png,image/webp,image/gif'; file.style.display='none';
+  file.dataset.upload=p.join('.'); file.dataset.dir=dir;
+  lab.appendChild(file);
+  const clr=document.createElement('button'); clr.className='smallbtn'; clr.textContent='不显示'; clr.dataset.clear=p.join('.');
+  const cur=document.createElement('span'); cur.className='ghost'; cur.textContent='目录：/assets/images/'+dir+'/';
+  r2.append(sel,lab,clr,cur);
+  mid.append(pathInp,r2); box.append(img,mid); f.appendChild(box); w.append(l,f); return w;
+}
+// ---------- gallery (multi-image list, string URLs) ----------
+async function galleryField(p, arr){
+  const wrap=document.createElement('div');
+  const tip=document.createElement('div'); tip.style.cssText='font-size:12px;color:#8a7a55;margin:2px 0 8px;line-height:1.5';
+  tip.textContent='展示顺序＝主图 → 悬停副图 → 下面这些。顾客点击产品即可左右切换/放大查看。每行可上传一张新图。';
+  wrap.appendChild(tip);
+  const rowsBox=document.createElement('div');
+  for(let i=0;i<arr.length;i++) rowsBox.appendChild(await galItem(p.concat(i), arr[i]));
+  wrap.appendChild(rowsBox);
+  const add=document.createElement('button'); add.className='smallbtn'; add.textContent='＋ 添加一张图'; add.dataset.addgal=p.join('.');
+  wrap.appendChild(add);
+  return wrap;
+}
+async function galItem(p, value){
+  const rowEl=document.createElement('div'); rowEl.style.cssText='display:flex;gap:8px;align-items:center;margin:6px 0;flex-wrap:wrap';
+  const img=document.createElement('img'); img.style.cssText='width:46px;height:46px;object-fit:cover;border-radius:6px;border:1px solid #e0d6bf;background:#fff;flex:none'; img.src=(value&&value.startsWith('/assets/'))?value:''; if(!value) img.style.visibility='hidden';
+  const inp=document.createElement('input'); inp.type='text'; inp.style.cssText='flex:1;min-width:170px'; inp.value=value||''; inp.dataset.path=p.join('.'); inp.placeholder='图片路径（一般用右侧按钮）';
+  const sel=document.createElement('select'); sel.dataset.pick=p.join('.'); sel.innerHTML='<option value="">— 选现有图 —</option>';
+  const files=await imgList('products'); files.forEach(f=>{ const o=document.createElement('option'); o.value=f.url; o.textContent=f.name+' ('+f.size+'KB)'; if(f.url===value) o.selected=true; sel.appendChild(o); });
+  const lab=document.createElement('label'); lab.className='smallbtn'; lab.style.cssText='cursor:pointer;flex:none'; lab.textContent='⬆ 上传';
+  const file=document.createElement('input'); file.type='file'; file.accept='image/jpeg,image/png,image/webp,image/gif'; file.style.display='none'; file.dataset.upload=p.join('.'); file.dataset.dir='products'; lab.appendChild(file);
+  const rm=document.createElement('button'); rm.className='smallbtn danger'; rm.textContent='删除'; rm.dataset.remove=p.join('.'); rm.style.cssText='flex:none';
+  rowEl.append(img,inp,sel,lab,rm);
+  return rowEl;
+}
+// ---------- arrays ----------
+function primRows(p, arr){
+  const box=document.createElement('div');
+  arr.forEach((it,i)=>{ const d=document.createElement('div'); d.style.cssText='display:flex;gap:8px;margin-top:6px';
+    d.innerHTML=`<input type="text" data-path="${p.join('.')}.${i}" value="${esc(it)}" style="flex:1" /><button class="smallbtn danger" data-remove="${p.join('.')}.${i}">删除</button>`;
+    box.appendChild(d); });
+  const b=document.createElement('button'); b.className='smallbtn'; b.textContent='＋ 加一行'; b.dataset.add=p.join('.'); box.appendChild(b); return box;
+}
+// addFirst=true 时「＋ 添加一项」放在列表最上面（产品管理区就是这种：
+// 产品一多，按钮放最底下每次都要滑到底才能点）。
+function objList(p, arr, addFirst){
+  const box=document.createElement('div');
+  const b=document.createElement('button'); b.className='btn'; b.textContent='＋ 添加一项'; b.dataset.add=p.join('.');
+  if(addFirst){ b.classList.add('addon-top'); box.appendChild(b); }
+  arr.forEach((it,i)=>box.appendChild(objCard(p,i,it)));
+  if(!addFirst) box.appendChild(b);
+  return box;
+}
+// ---------- 前台「摆放位置」----------
+// ⚠️ FRONT_PAGE_SIZE 必须和前台 src/App.jsx 里 PAGE_SIZE_OPTIONS[0] 保持一致（前台默认每页 12 个）。
+// 前台是响应式栅格（>1200px 4 列 / ≤1200px 3 列 / ≤900px 2 列），12 是 4/3/2 的最小公倍数，
+// 所以每页 12 个在任何宽度都刚好铺满、末尾不留白格。
+const FRONT_PAGE_SIZE = 12;
+function frontSlotOf(i){ return { page: Math.floor(i/FRONT_PAGE_SIZE)+1, pos: (i%FRONT_PAGE_SIZE)+1 }; }
+function placeRow(abs, i){
+  const slot=frontSlotOf(i);
+  const total=Math.max(1, Math.ceil(((state.PRODUCTS||[]).length)/FRONT_PAGE_SIZE));
+  const w=document.createElement('div'); w.className='placerow';
+  const info=document.createElement('span'); info.className='pinfo';
+  info.innerHTML='📍 前台摆放：第 <b>'+slot.page+'</b> 页 · 第 <b>'+slot.pos+'</b> 位'+
+    '<span class="ghost">（共 '+total+' 页，每页 '+FRONT_PAGE_SIZE+' 个；按前台默认排序 Featured 展示）</span>';
+  const mk=(label)=>{ const s=document.createElement('span'); s.textContent=label; return s; };
+  const pi=document.createElement('input'); pi.type='number'; pi.min='1'; pi.value=String(slot.page); pi.className='slotnum'; pi.dataset.slotPage=abs.join('.');
+  const si=document.createElement('input'); si.type='number'; si.min='1'; si.max=String(FRONT_PAGE_SIZE);
+  si.value=String(slot.pos); si.className='slotnum'; si.dataset.slotPos=abs.join('.');
+  const go=document.createElement('button'); go.className='smallbtn'; go.textContent='移过去'; go.dataset.place=abs.join('.');
+  const right=document.createElement('span'); right.className='ghost'; right.style.cssText='margin-left:auto';
+  w.append(info,right,mk('第'),pi,mk('页 第'),si,mk('位'),go);
+  return w;
+}
+function objCard(p, i, item){
+  const abs=p.concat(i);
+  const card=document.createElement('div'); card.className='card';
+  card.dataset.arrPath=p.join('.'); card.dataset.itemIndex=String(i);
+  const titleKey=TITLE_KEYS.find(k=>item&&typeof item[k]==='string'&&item[k].trim());
+  const h=document.createElement('h4'); h.dataset.h='1';
+  h.innerHTML=`<span class="t">${esc(titleKey?item[titleKey]:'条目 '+(i+1))}</span><span class="idx">#${i+1}</span>`;
+  const bar=document.createElement('div'); bar.className='cardbar';
+  for(const [txt,act] of [['上移',`${abs.join('.')}:up`],['下移',`${abs.join('.')}:down`],['复制本项',`${abs.join('.')}:dup`]]){ const b=document.createElement('button'); b.className='smallbtn'; b.textContent=txt; b.dataset.move=act; bar.appendChild(b); }
+  const rm=document.createElement('button'); rm.className='smallbtn danger'; rm.textContent='删除本项'; rm.dataset.remove=abs.join('.'); bar.appendChild(rm);
+  card.append(h,bar);
+  // 只有最外层产品列表要「摆放位置」；价格阶梯那种嵌套列表不需要（它没有前台页码概念）。
+  if(p.length===1&&p[0]==='PRODUCTS') card.appendChild(placeRow(abs,i));
+  fillObject(card, item, abs);
+  return card;
+}
+function fillObject(host, obj, abs){
+  Object.keys(obj).forEach(k=>{
+    const v=obj[k]; const p=abs.concat(k);
+    if(Array.isArray(v)){
+      if(k==='gallery'){ const hh=document.createElement('div'); hh.style.cssText='font-weight:700;font-size:12.5px;margin:10px 0 2px;color:#7a5f22'; hh.textContent=zh(k); host.appendChild(hh);
+        galleryField(p,v).then(el=>host.appendChild(el)); return; }
+      const hh=document.createElement('div'); hh.style.cssText='font-weight:700;font-size:12.5px;margin:10px 0 2px;color:#7a5f22'; hh.textContent=zh(k); host.appendChild(hh);
+      host.appendChild(v.length&&typeof v[0]==='object'?objList(p,v):primRows(p,v)); return; }
+    if(v&&typeof v==='object'){ const hh=document.createElement('div'); hh.style.cssText='font-weight:700;font-size:13px;margin:10px 0 2px;color:#9a7830'; hh.textContent=zh(k); host.appendChild(hh);
+      const sub=document.createElement('div'); sub.style.cssText='border-left:3px solid #e4d8bc;padding-left:12px'; fillObject(sub,v,p); host.appendChild(sub); return; }
+    if((k==='image'||k==='hover'||k==='src')&&(typeof v==='string'||v==null||v==='')){ imageField(p,v).then(f=>host.appendChild(f)); return; }
+    host.appendChild(scalarField(p,v));
+  });
+}
+function renderInto(host, obj, abs){ fillObject(host, obj, abs); }
+async function renderCurrent(){
+  if(!current) return;
+  const body=$('#body'); body.innerHTML=''; $('#secDesc').textContent=TOP_DESC[current]||'';
+  const title=document.createElement('div'); title.className='sec-title'; title.textContent=zh(current); body.appendChild(title);
+  const v=state[current];
+  if(v==null||typeof v!=='object'){ body.appendChild(textField([current], v)); return; }
+  if(Array.isArray(v)){
+    if(current==='PRODUCTS') body.appendChild(productSearchBar());
+    body.appendChild(v.length&&typeof v[0]==='object'?objList([current],v,current==='PRODUCTS'):primRows([current],v));
+    if(current==='PRODUCTS') applyProductFilter();
+    return;
+  }
+  if(current==='PROJECT_CASES'){ body.appendChild(renderCases()); return; }
+  renderInto(body, v, [current]);
+}
+function renderNav(){ const nav=$('#nav'); nav.innerHTML='';
+  Object.keys(state).forEach(k=>{ const b=document.createElement('button'); b.className=k===current?'active':''; b.dataset.sel=k;
+    const l=document.createElement('span'); l.textContent=zh(k);
+    const c=document.createElement('span'); c.className='cnt'; const v=state[k]; if(Array.isArray(v)) c.textContent='× '+v.length;
+    b.append(l,c); nav.appendChild(b); }); }
+async function reload(){ const r=await fetch('/api/content'); if(!r.ok) throw new Error('读取失败'); state=await r.json(); if(!current) current=Object.keys(state)[0]; imgCache={}; renderNav(); await renderCurrent(); setDirty(false); toast('已载入当前内容'); }
+// ---------- product search (by name / by 1688 product ID) ----------
+// Both boxes narrow the product list down to matching products only.
+// Cards are hidden with display:none, so every data-path index still points
+// at the real product in state.PRODUCTS — editing a filtered card is safe.
+let prodFilter = { name: '', code: '' };
+// 分页：默认每页 10 个产品，可切 10/20/30/40/50。翻页和搜索一样，只把不在当前页的
+// 卡片 display:none 掉，不重建 DOM —— 所以每个卡片的 data-path 索引始终指向真实产品。
+let prodPage = 1, prodPageSize = 10, prodPageCount = 1;
+const PAGE_SIZES = [10, 20, 30, 40, 50];
+function productSearchBar(){
+  const w=document.createElement('div'); w.className='searchbar';
+  w.innerHTML =
+    '<h5>🔍 搜索产品（只显示匹配的产品，可直接修改）</h5>'+
+    '<div class="searchrow"><label>按名称</label><input type="text" id="pSearchName" placeholder="输入产品名称的一部分，例如 wall / pendant / 吊灯" value="'+esc(prodFilter.name)+'" /></div>'+
+    '<div class="searchrow"><label>按编号</label><input type="text" id="pSearchModel" placeholder="输入 1688 产品ID，例如 949724474758（也可输入型号，如 AH-2575）" value="'+esc(prodFilter.code)+'" /></div>'+
+    '<div class="searchmeta"><span id="pSearchCount"></span><button class="smallbtn" id="pSearchClear">清空搜索</button></div>'+
+    '<div class="pagerrow">'+
+      '<span class="pinfo" id="pPageInfo"></span>'+
+      '<button class="smallbtn" id="pFirst">首页</button>'+
+      '<button class="smallbtn" id="pPrev">上一页</button>'+
+      '<button class="smallbtn" id="pNext">下一页</button>'+
+      '<button class="smallbtn" id="pLast">末页</button>'+
+      '<label>每页 <select id="pPageSize">'+PAGE_SIZES.map(n=>'<option value="'+n+'"'+(n===prodPageSize?' selected':'')+'>'+n+' 个</option>').join('')+'</select></label>'+
+    '</div>';
+  return w;
+}
+function applyProductFilter(){
+  // Keep the filter in sync with what the two boxes actually display, so the
+  // shown list can never disagree with the visible search text.
+  const ni=$('#pSearchName'), mi=$('#pSearchModel');
+  if(ni) prodFilter.name=ni.value;
+  if(mi) prodFilter.code=mi.value;
+  const cards=[].slice.call(document.querySelectorAll('.card[data-arr-path="PRODUCTS"]'));
+  const n=prodFilter.name.trim().toLowerCase(), m=prodFilter.code.trim().toLowerCase();
+  const active=!!(n||m);
+
+  // 1) 先按搜索条件挑出匹配的产品（保持它们在数组里的原始顺序）
+  const matched=cards.filter(card=>{
+    const it=(state.PRODUCTS||[])[Number(card.dataset.itemIndex)]||{};
+    // 编号 = 1688 后台产品ID（content.json 的 id 字段）；顺带也匹配型号 model
+    const code=String(it.id||'').toLowerCase()+' '+String(it.model||'').toLowerCase();
+    return (!n||String(it.name||'').toLowerCase().includes(n)) && (!m||code.includes(m));
+  });
+
+  // 2) 再按页切一片出来：只显示这一片，其余隐藏
+  const total=matched.length;
+  const pageCount=Math.max(1, Math.ceil(total/prodPageSize));
+  prodPageCount=pageCount;
+  if(prodPage>pageCount) prodPage=pageCount;
+  if(prodPage<1) prodPage=1;
+  const start=(prodPage-1)*prodPageSize;
+  const onPage=matched.slice(start, start+prodPageSize);
+  const visibleSet=new Set(onPage);
+  cards.forEach(card=>{ card.style.display = visibleSet.has(card) ? '' : 'none'; });
+
+  // 3) 文案
+  const c=$('#pSearchCount');
+  if(c) c.innerHTML = !active ? ('共 '+cards.length+' 个产品')
+    : total===0 ? ('<span class="hit">没有找到匹配的产品</span>（共 '+cards.length+' 个，换个关键词试试）')
+    : ('匹配 <span class="hit">'+total+'</span> / '+cards.length+' 个产品');
+
+  const info=$('#pPageInfo');
+  if(info) info.innerHTML = total===0
+    ? '没有可显示的产品'
+    : ('第 <b>'+prodPage+'</b> / '+pageCount+' 页 · 本页 '+onPage.length+' 个 · '
+       + (active ? ('匹配 '+total+' 个') : ('共 '+total+' 个')));
+
+  const set=(id,disabled)=>{ const b=$('#'+id); if(b) b.disabled=!!disabled; };
+  const empty=total===0;
+  set('pFirst', empty||prodPage<=1); set('pPrev', empty||prodPage<=1);
+  set('pNext', empty||prodPage>=pageCount); set('pLast', empty||prodPage>=pageCount);
+}
+function prodGoTo(page){ prodPage=page; applyProductFilter(); }
+
+// ---------- Project cases (PROJECT_CASES) — dedicated, prettier renderer ----------
+function newCaseTpl(){
+  return { slug:'', title:'新案例名称', category:'Commercial & Fitness', place:'空间 A / 空间 B',
+    image:'', caption:'一句话说明这个项目。',
+    detail:{ client:'—', year:'2026', location:'空间 A / 空间 B', images:[''],
+      overview:['项目简介第一段……','第二段（可选）……'],
+      specs:[['Project type',''],['Locations',''],['Year','2026'],['Fixtures',''],['Materials',''],['Lead time','']] } };
+}
+function caseFieldLabel(host, text){ const h=document.createElement('div'); h.style.cssText='font-weight:700;font-size:12.5px;margin:10px 0 2px;color:#7a5f22'; h.textContent=text; host.appendChild(h); }
+function projImgRow(p, value){
+  const rowEl=document.createElement('div'); rowEl.style.cssText='display:flex;gap:8px;align-items:center;margin:6px 0;flex-wrap:wrap';
+  const img=document.createElement('img'); img.style.cssText='width:46px;height:46px;object-fit:cover;border-radius:6px;border:1px solid #e0d6bf;background:#fff;flex:none'; img.src=(value&&value.startsWith('/assets/'))?value:''; if(!value) img.style.visibility='hidden';
+  const inp=document.createElement('input'); inp.type='text'; inp.style.cssText='flex:1;min-width:170px'; inp.value=value||''; inp.dataset.path=p.join('.'); inp.placeholder='图片路径（一般用右侧按钮）';
+  const sel=document.createElement('select'); sel.dataset.pick=p.join('.'); sel.innerHTML='<option value="">— 选现有图 —</option>';
+  imgList('projects').then(files=>{ files.forEach(f=>{ const o=document.createElement('option'); o.value=f.url; o.textContent=f.name+' ('+f.size+'KB)'; if(f.url===value) o.selected=true; sel.appendChild(o); }); });
+  const lab=document.createElement('label'); lab.className='smallbtn'; lab.style.cssText='cursor:pointer;flex:none'; lab.textContent='⬆ 上传';
+  const file=document.createElement('input'); file.type='file'; file.accept='image/jpeg,image/png,image/webp,image/gif'; file.style.display='none'; file.dataset.upload=p.join('.'); file.dataset.dir='projects'; lab.appendChild(file);
+  const rm=document.createElement('button'); rm.className='smallbtn danger'; rm.textContent='删除'; rm.dataset.remove=p.join('.'); rm.style.cssText='flex:none';
+  rowEl.append(img,inp,sel,lab,rm);
+  return rowEl;
+}
+function projImagesField(p, arr){
+  const wrap=document.createElement('div');
+  const tip=document.createElement('div'); tip.style.cssText='font-size:12px;color:#8a7a55;margin:2px 0 8px;line-height:1.5';
+  tip.textContent='该案例的全部图片（同一款灯在不同场景），第一张＝大图默认。每行可上传新图。';
+  wrap.appendChild(tip);
+  arr.forEach((it,i)=> wrap.appendChild(projImgRow(p.concat(i), it)));
+  const add=document.createElement('button'); add.className='smallbtn'; add.textContent='＋ 加一张图'; add.dataset.addgal=p.join('.');
+  wrap.appendChild(add);
+  return wrap;
+}
+function projOverviewField(p, arr){
+  const wrap=document.createElement('div');
+  arr.forEach((it,i)=>{ const d=document.createElement('div'); d.style.cssText='margin:6px 0';
+    const ta=document.createElement('textarea'); ta.value=it||''; ta.dataset.path=p.join('.')+'.'+i; ta.style.cssText='width:100%'; d.appendChild(ta);
+    const rm=document.createElement('button'); rm.className='smallbtn danger'; rm.style.cssText='margin-top:5px'; rm.textContent='删除本段'; rm.dataset.remove=p.join('.')+'.'+i; d.appendChild(rm);
+    wrap.appendChild(d); });
+  const add=document.createElement('button'); add.className='smallbtn'; add.textContent='＋ 加一段'; add.dataset.add=p.join('.'); wrap.appendChild(add);
+  return wrap;
+}
+function projSpecsField(p, arr){
+  const wrap=document.createElement('div');
+  arr.forEach((row,i)=>{ const r=document.createElement('div'); r.style.cssText='display:flex;gap:8px;align-items:center;margin:6px 0';
+    const k=document.createElement('input'); k.type='text'; k.value=(row&&row[0])||''; k.dataset.path=p.join('.')+'.'+i+'.0'; k.placeholder='项（如 Project type）'; k.style.cssText='width:180px;flex:none';
+    const v=document.createElement('input'); v.type='text'; v.value=(row&&row[1])||''; v.dataset.path=p.join('.')+'.'+i+'.1'; v.placeholder='值'; v.style.cssText='flex:1;min-width:140px';
+    const rm=document.createElement('button'); rm.className='smallbtn danger'; rm.textContent='删除'; rm.dataset.remove=p.join('.')+'.'+i; rm.style.cssText='flex:none';
+    r.append(k,v,rm); wrap.appendChild(r); });
+  const add=document.createElement('button'); add.className='smallbtn'; add.textContent='＋ 加一项'; add.dataset.addspec=p.join('.'); wrap.appendChild(add);
+  return wrap;
+}
+function caseCard(i, item){
+  const abs=['PROJECT_CASES','cases',i];
+  const card=document.createElement('div'); card.className='card'; card.dataset.arrPath='PROJECT_CASES.cases'; card.dataset.itemIndex=String(i);
+  const h=document.createElement('h4'); h.dataset.h='1';
+  h.innerHTML='<span class="t">'+esc(item.title||('案例 '+(i+1)))+'</span><span class="idx">#'+(i+1)+(i<4?' · 🏠 主页显示':'')+'</span>';
+  const bar=document.createElement('div'); bar.className='cardbar';
+  for(const [txt,act] of [['上移',abs.join('.')+':up'],['下移',abs.join('.')+':down'],['复制本项',abs.join('.')+':dup']]){ const b=document.createElement('button'); b.className='smallbtn'; b.textContent=txt; b.dataset.move=act; bar.appendChild(b); }
+  const rm=document.createElement('button'); rm.className='smallbtn danger'; rm.textContent='删除本项'; rm.dataset.remove=abs.join('.'); bar.appendChild(rm);
+  card.append(h,bar);
+  const note=document.createElement('div'); note.className='hint'; note.textContent=i<4?'这个案例会显示在主页 Project cases 区块（前 4 个）。':'仅显示在「View all projects」目录页，不在主页网格。'; card.appendChild(note);
+  card.appendChild(textField(abs.concat('slug'), item.slug||''));
+  card.appendChild(textField(abs.concat('title'), item.title||''));
+  card.appendChild(textField(abs.concat('category'), item.category||''));
+  card.appendChild(textField(abs.concat('place'), item.place||''));
+  card.appendChild(textField(abs.concat('caption'), item.caption||''));
+  imageField(abs.concat('image'), item.image||'').then(el=>card.appendChild(el));
+  const d=item.detail||{};
+  caseFieldLabel(card,'详情页信息');
+  card.appendChild(textField(abs.concat('detail','client'), d.client||''));
+  card.appendChild(textField(abs.concat('detail','year'), d.year||''));
+  card.appendChild(textField(abs.concat('detail','location'), d.location||''));
+  caseFieldLabel(card,'详情页图片（同一款灯的不同场景，第一张＝默认大图）');
+  card.appendChild(projImagesField(abs.concat('detail','images'), d.images||[]));
+  caseFieldLabel(card,'项目概览（每段一个文本框）');
+  card.appendChild(projOverviewField(abs.concat('detail','overview'), d.overview||[]));
+  caseFieldLabel(card,'项目规格（左＝项，右＝值）');
+  card.appendChild(projSpecsField(abs.concat('detail','specs'), d.specs||[]));
+  return card;
+}
+function renderCases(){
+  const host=document.createElement('div');
+  const pc=state.PROJECT_CASES||{};
+  host.appendChild(textField(['PROJECT_CASES','heading'], pc.heading||''));
+  host.appendChild(textField(['PROJECT_CASES','note'], pc.note||''));
+  const ex=document.createElement('div'); ex.className='sec-desc'; ex.style.margin='12px 0';
+  ex.textContent='📌 主页「Project cases」固定只显示【前 4 个】案例（顺序＝下方列表顺序，最上面＝主页第 1 格）。新增的案例会自动出现在「View all projects」目录页，不会挤占主页。每款灯可放多张图（同一款灯不同场景）。保存后需重新构建发布。';
+  host.appendChild(ex);
+  const cases=pc.cases||[];
+  const box=document.createElement('div');
+  const add=document.createElement('button'); add.className='btn addon-top'; add.textContent='＋ 添加案例（放到列表最后）'; add.dataset.add='PROJECT_CASES.cases'; box.appendChild(add);
+  cases.forEach((it,i)=> box.appendChild(caseCard(i,it)));
+  host.appendChild(box);
+  return host;
+}
+
+// ---------- events ----------
+document.addEventListener('input',e=>{
+  // 改搜索词就回到第 1 页，否则会停在一个搜完之后不存在的页码上。
+  if(e.target.id==='pSearchName'){ prodFilter.name=e.target.value; prodPage=1; applyProductFilter(); return; }
+  if(e.target.id==='pSearchModel'){ prodFilter.code=e.target.value; prodPage=1; applyProductFilter(); return; }
+  const t=e.target.dataset; if(!t||!t.path) return; const p=toPath(t.path);
+  if(t.bool) setPath(p,!!e.target.checked);
+  else if(t.nullable){ const s=e.target.value; const n=s===''?null:Number(s); setPath(p, Number.isNaN(n)?null:n); }
+  else setPath(p, e.target.value);
+  setDirty(true);
+  const last=p[p.length-1];
+  if(TITLE_KEYS.includes(last)){ const hh=e.target.closest('.card')&&e.target.closest('.card').querySelector('h4 .t'); if(hh&&e.target.value) hh.textContent=e.target.value; }
+});
+document.addEventListener('change',async e=>{
+  const t=e.target.dataset; if(!t) return;
+  if(e.target.id==='pPageSize'){ prodPageSize=Number(e.target.value)||10; prodPage=1; applyProductFilter(); return; }
+  if(t.pick){ setPath(toPath(t.pick), e.target.value); setDirty(true); await renderCurrent(); toast('已选择新图，记得保存'); return; }
+  if(t.upload&&e.target.files&&e.target.files[0]){
+    const file=e.target.files[0]; const ext=file.name.split('.').pop().toLowerCase();
+    if(!['jpg','jpeg','png','webp','gif'].includes(ext)){ toast('仅支持 jpg/png/webp/gif'); return; }
+    if(file.size>9*1024*1024){ toast('图片超过9MB，请先压到2MB内再上传'); return; }
+    const fr=new FileReader();
+    fr.onload=async()=>{ const data=String(fr.result).split(',')[1];
+      try{ const r=await fetch('/api/upload',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dir:t.dir,file:'up-'+Date.now()+'.'+ext,data})});
+        const j=await r.json(); if(!r.ok) throw new Error(j.error||'上传失败');
+        setPath(toPath(t.upload), j.url); setDirty(true); imgCache={}; await renderCurrent(); toast('✅ 新图已上传并替换，记得保存'); }
+      catch(err){ toast('上传失败：'+err.message); } };
+    fr.readAsDataURL(file); return;
+  }
+});
+document.addEventListener('click',async e=>{
+  if(e.target.id==='pSearchClear'){
+    prodFilter={name:'',code:''};
+    const a=$('#pSearchName'), b=$('#pSearchModel');
+    if(a)a.value=''; if(b)b.value='';
+    prodPage=1;
+    applyProductFilter();
+    return;
+  }
+  if(e.target.id==='pFirst'){ prodGoTo(1); return; }
+  if(e.target.id==='pPrev'){ prodGoTo(prodPage-1); return; }
+  if(e.target.id==='pNext'){ prodGoTo(prodPage+1); return; }
+  if(e.target.id==='pLast'){ prodGoTo(prodPageCount); return; }
+  // ⚠️ 这里的选择器列表必须和所有用到的 data-* 按钮一一对应，漏一个 = 那个按钮
+  // 静默失效（closest 返回 null → 直接 return，console 一条错都没有）。
+  // 注意 [data-add] 不等于 [data-addgal]：属性选择器是精确匹配属性名，
+  // 「＋ 添加一张图」用的 data-addgal 必须单独列出来。
+  const el=e.target.closest('[data-sel],[data-add],[data-addgal],[data-remove],[data-move],[data-clear],[data-place],[data-addspec]');
+  if(!el) return;
+  if(el.dataset.sel){ current=el.dataset.sel; renderNav(); await renderCurrent(); return; }
+  if(el.dataset.add){ const p=toPath(el.dataset.add); const arr=getPath(p);
+    if(!Array.isArray(arr)) return;
+    const isProducts = el.dataset.add==='PRODUCTS';
+    // ⚠️ 新加的一律 push 到数组末尾（＝前台默认排序 Featured 的最后一位）。
+    // 这里永远不要改成 unshift 或往中间插 —— 用户明确要求"新加的先放后面，要提前我自己调"。
+    arr.push(tplFor(p)); setDirty(true);
+    // 按钮在列表顶上、新项在末尾：不翻到最后一页的话，用户会以为"点了没反应"。
+    if(isProducts) prodPage=99999; // applyProductFilter 会收敛到最后一页
+    await renderCurrent();
+    const i = arr.length - 1;
+    if(isProducts){
+      // 明确告诉用户"放到了最后"，否则很容易误以为它跑到前面去了。
+      const slot = frontSlotOf(i);
+      toast('已加到列表最后：第 ' + (i + 1) + ' / ' + arr.length + ' 个 · 前台第 ' + slot.page + ' 页第 ' + slot.pos + ' 位（想提前用卡片上的「📍 前台摆放」自己调）', 6500);
+      const nc = document.querySelector('.card[data-arr-path="PRODUCTS"][data-item-index="' + i + '"]');
+      if(nc && nc.scrollIntoView) nc.scrollIntoView({block:'center'});
+    } else {
+      toast('已添加 1 项，放在列表最后');
+    }
+    return; }
+  if(el.dataset.addgal){ const p=toPath(el.dataset.addgal); getPath(p).push(''); setDirty(true); await renderCurrent();
+    // 新加的是一张空图，在新行里就是个灰框 —— 给一句话确认，不然容易以为没反应。
+    toast('已添加 1 张图（空行），在新行里「选现有图」或「⬆ 上传」，然后记得保存'); return; }
+  if(el.dataset.addspec){ const p=toPath(el.dataset.addspec); const arr=getPath(p); if(Array.isArray(arr)) arr.push(['','']); setDirty(true); await renderCurrent(); return; }
+  if(el.dataset.remove){ delPath(toPath(el.dataset.remove)); setDirty(true); await renderCurrent(); return; }
+  if(el.dataset.move){ const [ps,act]=el.dataset.move.split(':'); const p=toPath(ps); const i=Number(p[p.length-1]);
+    // ⚠️ data-move 带的是「元素路径」（PRODUCTS.2），要操作的是它所在的数组，
+    // 所以必须先 slice 掉最后一段拿到父级数组。直接 getPath(p) 拿到的是产品对象本身，
+    // arr.length 是 undefined，守卫条件 1 < undefined 恒为 false —— 按钮会静默失效。
+    const arr=getPath(p.slice(0,-1));
+    if(!Array.isArray(arr) || !arr[i]) return;
+    if(act==='dup'){
+      // ⚠️ 这里以前没有单独分支，"复制本项"被当成 act!=='up' 落到下面的 to=i+1，
+      // 结果只是把原件往下挪一格（原件在最后时更是静默不动）。现在真正复制一份。
+      const copy = JSON.parse(JSON.stringify(arr[i]));   // 深拷贝，免得两份共用同一个子数组
+      if(copy && typeof copy==='object'){
+        if('name' in copy) copy.name = String(copy.name||'') + '（副本）';
+        if('id' in copy) copy.id = '';                   // id 是 1688 产品ID，副本不能沿用原编号
+        if('slug' in copy) copy.slug = '';               // 案例副本清空 slug，避免 /project/<slug> 冲突
+      }
+      arr.splice(i+1, 0, copy); setDirty(true); await renderCurrent();
+      toast('已复制一份放在原件后面（在列表里，没往前面插）；编号已清空，记得填新的 1688 产品ID', 6500);
+      return;
+    }
+    const to = act==='up' ? i-1 : i+1;
+    if(to>=0 && to<arr.length){ const [it]=arr.splice(i,1); arr.splice(to,0,it); setDirty(true); await renderCurrent(); }
+    else toast(act==='up' ? '已经在最前面了' : '已经在最后面了');
+    return; }
+  // 指定「放到前台第几页第几位」。实现上就是把产品在 PRODUCTS 数组里搬到目标下标：
+  // (页-1)*每页个数 + (位-1)。其余产品自动顺延，不会有两个挤在同一格。
+  if(el.dataset.place){
+    const p=toPath(el.dataset.place);              // ['PRODUCTS', i]
+    const arr=getPath(p.slice(0,-1));              // state.PRODUCTS
+    if(!Array.isArray(arr)) return;
+    const i=Number(p[p.length-1]);
+    const card=el.closest('.card');
+    const pi=card&&card.querySelector('[data-slot-page]');
+    const si=card&&card.querySelector('[data-slot-pos]');
+    const page=Math.max(1, Number(pi&&pi.value)||1);
+    const pos=Math.max(1, Math.min(FRONT_PAGE_SIZE, Number(si&&si.value)||1));
+    const wanted=(page-1)*FRONT_PAGE_SIZE+(pos-1);
+    let to=wanted; const clamped=to>arr.length-1;
+    if(clamped) to=arr.length-1;
+    if(to===i){ toast('这个产品已经在第 '+page+' 页第 '+pos+' 位了'); return; }
+    const [it]=arr.splice(i,1); arr.splice(to,0,it);
+    setDirty(true);
+    // 没开搜索过滤时，顺便把编辑器的列表翻到它去的那一页，好让用户看到结果。
+    if(!prodFilter.name&&!prodFilter.code) prodPage=Math.floor(to/prodPageSize)+1;
+    await renderCurrent();
+    const f=frontSlotOf(to);
+    toast('已移到第 '+f.page+' 页第 '+f.pos+' 位'+(clamped?'（超出范围，已放到最后）':'')+'，后面的产品自动顺延。记得点右上角保存', 6500);
+    return;
+  }
+  if(el.dataset.clear){ const p=toPath(el.dataset.clear); setPath(p,''); setDirty(true); await renderCurrent(); }
+});
+$('#saveBtn').onclick=async()=>{ try{ const r=await fetch('/api/content',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(state)});
+  if(!r.ok) throw new Error('保存失败'); setDirty(false); toast('✅ 已保存（src/content.json）。运行 npm run dev 即可预览'); }
+  catch(err){ toast('保存失败：'+err.message); } };
+$('#reloadBtn').onclick=async()=>{ if(!dirty||confirm('放弃未保存修改并重新载入？')) await reload(); };
+window.addEventListener('beforeunload',e=>{ if(dirty){ e.preventDefault(); e.returnValue=''; } });
+reload().catch(err=>toast('初始化失败：'+err.message));
+</script>
+</body>
+</html>
