@@ -1,0 +1,1926 @@
+{
+  "CONTACT": {
+    "phoneDisplay": "+86 135 5672 1857",
+    "phoneHref": "tel:+8613556721857",
+    "email": "aoshahua@gmail.com",
+    "emailHref": "mailto:2596607017@qq.com?subject=Inquiry%20to%20Aoshahua%20Lighting&body=Hello%20Aoshahua%20Lighting%2C%0A%0AWe%20are%20interested%20in%20your%20lighting%20products.%20Please%20send%20us%20your%20catalog%20and%20pricing.%0A%0A",
+    "addressLine1": "Zhongshan",
+    "addressLine2": "Guangdong, China",
+    "legalName": "江门市澳沙华照明有限公司 (Aoshahua Lighting Co., Ltd.)",
+    "whatsapp": "+86 135 5672 1857",
+    "whatsappHref": "https://wa.me/8613556721857",
+    "wechat": "+86 135 5672 1857"
+  },
+  "NAV": [
+    {
+      "label": "Products",
+      "href": "#products"
+    },
+    {
+      "label": "Project Cases",
+      "href": "#cases"
+    },
+    {
+      "label": "Company",
+      "href": "#company"
+    },
+    {
+      "label": "How We Work",
+      "href": "#process"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "ANNOUNCEMENT": "Factory-direct lighting · CCC & ISO 9000 certified · 500+ models · Worldwide shipping",
+  "CATALOG": {
+    "image": "/assets/images/hero/hero-wide.jpg",
+    "imageAlt": "Warm-lit hotel lobby lounge with a brass and stone chandelier and matching wall sconces",
+    "ctaPrimaryLabel": "Browse products",
+    "ctaSecondaryLabel": "Get a quote",
+    "eyebrow": "Aoshahua Collection",
+    "title": "Statement lighting, made in our Zhongshan workshop",
+    "lede": "Browse a selection of our best-selling chandeliers, marble wall sconces and pendant lights. Every piece is designed, produced and quality-tested by our own factory — order in bulk or ask for a custom quote. Full catalog: 500+ models."
+  },
+  "HERO_SLIDES": [
+    {
+      "image": "/assets/images/hero/slide-1-glass-petals.jpg",
+      "imageAlt": "Suspended glass petal chandelier in gold and clear hand-blown glass",
+      "eyebrow": "Aoshahua Collection",
+      "title": "Statement lighting, made in our Zhongshan workshop",
+      "lede": "Browse a selection of our best-selling chandeliers, marble wall sconces and pendant lights. Every piece is designed, produced and quality-tested by our own factory — order in bulk or ask for a custom quote. Full catalog: 500+ models."
+    },
+    {
+      "image": "/assets/images/hero/slide-2-lobby.jpg",
+      "imageAlt": "Double-height hotel lobby with a glass-bead multi-drop chandelier",
+      "eyebrow": "Hotel & Hospitality",
+      "title": "Lobbies and lounges, finished with light",
+      "lede": "Marble, brass and hand-blown glass pieces installed in hotel lobbies, spas and boutique lounges across the world — designed and produced by our own workshop."
+    },
+    {
+      "image": "/assets/images/hero/slide-3-amber-waves.jpg",
+      "imageAlt": "Sculptural amber and clear glass wave chandelier over a dining room",
+      "eyebrow": "Hand-blown Glass",
+      "title": "Sculptural light, blown by hand",
+      "lede": "Suspended glass pieces in gold, amber and clear — one-of-a-kind statement chandeliers for dining rooms, lobbies and showrooms, made to measure in our workshop."
+    },
+    {
+      "image": "/assets/images/hero/slide-4-restaurant.jpg",
+      "imageAlt": "Restaurant interior with a large linear metal statement chandelier",
+      "eyebrow": "Custom & Projects",
+      "title": "From a single pendant to a full venue",
+      "lede": "OEM / ODM, turnkey project packages and restaurant & hotel lighting schemes. Send your drawings or just describe the space — our team quotes from one piece to a full container."
+    }
+  ],
+  "SERIES": [
+    {
+      "id": "all",
+      "label": "All"
+    },
+    {
+      "id": "crystal",
+      "label": "Crystal Chandeliers"
+    },
+    {
+      "id": "wall",
+      "label": "Wall Sconces"
+    },
+    {
+      "id": "table",
+      "label": "Table Lamps"
+    },
+    {
+      "id": "floor",
+      "label": "Floor Lamps"
+    },
+    {
+      "id": "pendant",
+      "label": "Pendant Lights"
+    },
+    {
+      "id": "office",
+      "label": "Office Lighting"
+    },
+    {
+      "id": "custom",
+      "label": "Large Custom Projects"
+    }
+  ],
+  "PRODUCTS": [
+    {
+      "id": "949724474758",
+      "name": "Modern Wall Sconce",
+      "series": "wall",
+      "marble": false,
+      "model": "AH-2575",
+      "summary": "Minimal modern wall sconce for living rooms, hotel lobbies and restaurants.",
+      "facts": [
+        "Iron frame",
+        "LED light source",
+        "220–240 V",
+        "12 colorways",
+        "5 kg"
+      ],
+      "priceFrom": 100,
+      "moq": 1,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 100
+        }
+      ],
+      "image": "/assets/images/products/prod-wall-sconce.jpg",
+      "hover": "/assets/images/products/hover-wall-sconce.jpg",
+      "gallery": [
+        "/assets/images/products/prod-wall-sconce-g3.jpg",
+        "/assets/images/products/prod-wall-sconce-g1.jpg",
+        "/assets/images/products/prod-wall-sconce-g2.jpg",
+        ""
+      ]
+    },
+    {
+      "id": "808680470415",
+      "name": "Hotel Ceiling Crystal Chandelier",
+      "series": "crystal",
+      "marble": false,
+      "model": "AH-24622B",
+      "summary": "Multi-head stainless steel and glass chandelier for hotel lobbies, showrooms, malls and offices.",
+      "facts": [
+        "Stainless steel",
+        "Glass shades",
+        "LED, 220–240 V",
+        "Multi-head",
+        "Custom colorways"
+      ],
+      "priceFrom": 100,
+      "moq": 1,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 100
+        }
+      ],
+      "image": "/assets/images/products/chandelier-ah24622b.jpg",
+      "hover": "/assets/images/products/hero-crystal-chandelier.jpg",
+      "gallery": [
+        "/assets/images/products/chandelier-ah24622b-g1.jpg",
+        "/assets/images/products/chandelier-ah24622b-g3.jpg",
+        "/assets/images/products/chandelier-ah24622b-g2.jpg",
+        "/assets/images/products/chandelier-ah24622b-g4.jpg"
+      ]
+    },
+    {
+      "id": "1064809714749",
+      "name": "Natural Marble Linear Pendant",
+      "series": "pendant",
+      "marble": true,
+      "model": null,
+      "summary": "Linear island pendant in natural marble with a gold-tone finish — made for kitchen islands and villa dining.",
+      "facts": [
+        "Marble shades",
+        "Gold-tone trim",
+        "LED light source",
+        "Length L1000 mm"
+      ],
+      "priceFrom": 980,
+      "moq": 1,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 980
+        }
+      ],
+      "image": "/assets/images/products/prod-marble-pendant.jpg",
+      "hover": "/assets/images/products/prod-marble-pendant-hover.jpg",
+      "gallery": [
+        "/assets/images/products/prod-marble-pendant-g1.jpg",
+        "/assets/images/products/prod-marble-pendant-g2.jpg",
+        "/assets/images/products/prod-marble-pendant-g4.jpg",
+        "/assets/images/products/prod-marble-pendant-g3.jpg"
+      ]
+    },
+    {
+      "id": "1080005345127",
+      "name": "Minimalist Iron Dining Pendant",
+      "series": "pendant",
+      "marble": false,
+      "model": null,
+      "summary": "Streamlined iron pendant built for export — restaurants, bars, cafés and modern dining rooms.",
+      "facts": [
+        "Iron frame",
+        "LED light source",
+        "220–240 V",
+        "Single-arm pendant"
+      ],
+      "priceFrom": 108,
+      "moq": 1,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 108
+        }
+      ],
+      "image": "/assets/images/products/prod-iron-pendant.jpg",
+      "hover": "/assets/images/products/hover-iron-pendant.jpg",
+      "gallery": [
+        "/assets/images/products/prod-iron-pendant-g1.jpg",
+        "/assets/images/products/prod-iron-pendant-g3.jpg",
+        "/assets/images/products/prod-iron-pendant-g4.jpg",
+        "/assets/images/products/prod-iron-pendant-g2.jpg"
+      ]
+    },
+    {
+      "id": "1081676557027",
+      "name": "Petals Glass Ring Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": null,
+      "summary": "Contemporary ring chandelier in hand-finished glass petals with gold electroplated stainless steel.",
+      "facts": [
+        "Stainless steel",
+        "Hand-glass petals",
+        "Gold finish",
+        "60 / 80 cm",
+        "LED"
+      ],
+      "priceFrom": 920,
+      "moq": 1,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 920
+        }
+      ],
+      "image": "/assets/images/products/prod-ring-chandelier.jpg",
+      "hover": "/assets/images/products/hover-ring-chandelier.jpg",
+      "gallery": [
+        "/assets/images/products/prod-ring-chandelier-g1.jpg",
+        "/assets/images/products/prod-ring-chandelier-g2.jpg",
+        "/assets/images/products/prod-ring-chandelier-g3.jpg",
+        "/assets/images/products/prod-ring-chandelier-g4.jpg"
+      ]
+    },
+    {
+      "id": "991942193325",
+      "name": "Custom Petal Ring Chandelier",
+      "series": "custom",
+      "marble": false,
+      "model": null,
+      "summary": "Made-to-measure petal ring chandelier — custom sizes on request for living rooms and villas.",
+      "facts": [
+        "Glass petals",
+        "Gold / rose-gold",
+        "LED",
+        "Custom size"
+      ],
+      "priceFrom": 300,
+      "moq": 1,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 300
+        }
+      ],
+      "image": "/assets/images/products/prod-petal-custom.jpg",
+      "hover": "/assets/images/products/prod-petal-custom-hover.jpg",
+      "gallery": [
+        "/assets/images/products/prod-petal-custom-g1.jpg",
+        "/assets/images/products/prod-petal-custom-g2.jpg",
+        "/assets/images/products/prod-petal-custom-g4.jpg",
+        "/assets/images/products/prod-petal-custom-g3.jpg"
+      ]
+    },
+    {
+      "id": "1080043789349",
+      "name": "Statement Marble Chandelier",
+      "series": "custom",
+      "marble": true,
+      "model": "NERO-W1",
+      "summary": "A grand marble-toned statement piece on stainless steel — for lobbies, living rooms and restaurants.",
+      "facts": [
+        "Marble-tone shades",
+        "Stainless steel",
+        "LED, 220–240 V",
+        "Tri-color light"
+      ],
+      "priceFrom": 330,
+      "moq": 1,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 330
+        }
+      ],
+      "image": "/assets/images/products/prod-project-chandelier.jpg",
+      "hover": "/assets/images/products/hover-project-chandelier.jpg",
+      "gallery": [
+        "/assets/images/products/prod-project-chandelier-g1.jpg",
+        "/assets/images/products/prod-project-chandelier-g4.jpg",
+        "/assets/images/products/prod-project-chandelier-g3.jpg",
+        "/assets/images/products/prod-project-chandelier-g2.jpg"
+      ]
+    },
+    {
+      "id": "990638730121",
+      "name": "Brass & Crystal Linear Chandelier",
+      "series": "crystal",
+      "marble": false,
+      "model": "AH-0615",
+      "summary": "Solid-brass American-style linear chandelier with crystal glass segments — for restaurants and lounges.",
+      "facts": [
+        "Solid brass",
+        "Crystal glass",
+        "LED, 220–240 V",
+        "6 / 8 arms",
+        "3000 K"
+      ],
+      "priceFrom": 2200,
+      "moq": 1,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 2200
+        }
+      ],
+      "image": "/assets/images/products/prod-brass-crystal.jpg",
+      "hover": "/assets/images/products/prod-brass-crystal-hover.jpg",
+      "gallery": [
+        "/assets/images/products/prod-brass-crystal-g1.jpg",
+        "/assets/images/products/prod-brass-crystal-g4.jpg",
+        "/assets/images/products/prod-brass-crystal-g2.jpg",
+        "/assets/images/products/prod-brass-crystal-g3.jpg"
+      ]
+    },
+    {
+      "id": "977488792653",
+      "name": "Solid-Copper Six-Arm Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-25903",
+      "summary": "Branch chandelier in solid copper with six LED arms — a refined classic for living rooms and dining halls.",
+      "facts": [
+        "Copper frame",
+        "LED, 220–240 V",
+        "6 lights",
+        "8 colorways"
+      ],
+      "priceFrom": 2300,
+      "moq": 1,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 2300
+        }
+      ],
+      "image": "/assets/images/products/prod-copper-chandelier.jpg",
+      "hover": "/assets/images/products/prod-copper-chandelier-hover.jpg",
+      "gallery": [
+        "/assets/images/products/prod-copper-chandelier-g1.jpg",
+        "/assets/images/products/prod-copper-chandelier-g3.jpg",
+        "/assets/images/products/prod-copper-chandelier-g2.jpg",
+        "/assets/images/products/prod-copper-chandelier-g4.jpg"
+      ]
+    },
+    {
+      "id": "992179509305",
+      "name": "Modern Multi-Head Ceiling Chandelier",
+      "series": "crystal",
+      "marble": false,
+      "summary": "Contemporary stainless steel and glass multi-head chandelier, flush or suspended — for bedrooms and living rooms.",
+      "facts": [
+        "Stainless steel",
+        "Glass shades",
+        "LED",
+        "Sizes 600–1000 mm"
+      ],
+      "moq": 1,
+      "priceFrom": 1300,
+      "tiers": [
+        {
+          "qty": 50,
+          "price": 1300
+        }
+      ],
+      "image": "/assets/images/products/992179509305-1.jpg",
+      "hover": "/assets/images/products/992179509305-2.jpg",
+      "gallery": [
+        "/assets/images/products/992179509305-2.jpg",
+        "/assets/images/products/992179509305-3.jpg",
+        "/assets/images/products/992179509305-4.jpg"
+      ],
+      "model": null,
+      "storeUrl": "https://detail.1688.com/offer/992179509305.html"
+    },
+    {
+      "id": "1083857468971",
+      "name": "Light Luxury Spiral Ring Glass Chandelier",
+      "series": "chandelier",
+      "marble": false,
+      "model": "a-1002",
+      "summary": "",
+      "facts": [
+        ""
+      ],
+      "priceFrom": null,
+      "moq": 1,
+      "tiers": [],
+      "image": "/assets/images/products/up-1789051526728.png",
+      "hover": "/assets/images/products/up-1789051532014.png",
+      "gallery": [
+        "/assets/images/products/up-1789087077687.png",
+        "/assets/images/products/up-1789087085867.png"
+      ]
+    },
+    {
+      "id": "1059389669476",
+      "name": "Natural Cloud Stone Bedside Wall Lamp",
+      "series": "wall",
+      "marble": true,
+      "model": "",
+      "summary": "Cloud stone (dunite) wall lamp for hotel rooms and bedheads — a clean, contemporary light for bedrooms, villas and project interiors.",
+      "facts": [
+        "Cloud stone shade",
+        "Iron body",
+        "LED light source",
+        "220–240 V",
+        "Hotel / bedside use"
+      ],
+      "keywords": [
+        "云石壁灯",
+        "dunite wall lamp",
+        "床头壁灯",
+        "酒店壁灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-1059389669476.jpg",
+      "gallery": [
+        "/assets/images/products/wall-1059389669476-1.jpg",
+        "/assets/images/products/wall-1059389669476-2.jpg",
+        "/assets/images/products/wall-1059389669476-3.jpg",
+        "/assets/images/products/wall-1059389669476-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-1059389669476-1.jpg"
+    },
+    {
+      "id": "1041113671720",
+      "name": "Modern Fabric Shade Wall Lamp",
+      "series": "wall",
+      "marble": false,
+      "model": "",
+      "summary": "Minimal wall lamp with an iron body and soft fabric shade — warm bedside and hallway lighting for hotels and homes.",
+      "facts": [
+        "Fabric shade",
+        "Iron body",
+        "LED light source",
+        "220–240 V",
+        "Bedside / hallway"
+      ],
+      "keywords": [
+        "布艺壁灯",
+        "铁艺壁灯",
+        "卧室壁灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-1041113671720.jpg",
+      "gallery": [
+        "/assets/images/products/wall-1041113671720-1.jpg",
+        "/assets/images/products/wall-1041113671720-2.jpg",
+        "/assets/images/products/wall-1041113671720-3.jpg",
+        "/assets/images/products/wall-1041113671720-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-1041113671720-1.jpg"
+    },
+    {
+      "id": "1078009328845",
+      "name": "Round Cloud Stone Wall Light",
+      "series": "wall",
+      "marble": true,
+      "model": "",
+      "summary": "Round cloud stone wall light with a light-luxury profile for bedrooms, corridors and villa exteriors. A cross-border best seller (Spain).",
+      "facts": [
+        "Cloud stone shade",
+        "Round form",
+        "LED light source",
+        "220–240 V",
+        "Indoor / courtyard"
+      ],
+      "keywords": [
+        "西班牙云石壁灯",
+        "圆形壁灯",
+        "轻奢墙灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-1078009328845.jpg",
+      "gallery": [
+        "/assets/images/products/wall-1078009328845-1.jpg",
+        "/assets/images/products/wall-1078009328845-2.jpg",
+        "/assets/images/products/wall-1078009328845-3.jpg",
+        "/assets/images/products/wall-1078009328845-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-1078009328845-1.jpg"
+    },
+    {
+      "id": "1073911562001",
+      "name": "Cloud Stone Background Wall Sconce",
+      "series": "wall",
+      "marble": true,
+      "model": "",
+      "summary": "Cloud stone wall sconce for feature background walls — hotel guest rooms, villa bedrooms and modern living spaces.",
+      "facts": [
+        "Cloud stone shade",
+        "Sconce form",
+        "LED light source",
+        "220–240 V",
+        "Background wall / hotel"
+      ],
+      "keywords": [
+        "云石壁灯",
+        "背景墙壁灯",
+        "工程壁灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-1073911562001.jpg",
+      "gallery": [
+        "/assets/images/products/wall-1073911562001-1.jpg",
+        "/assets/images/products/wall-1073911562001-2.jpg",
+        "/assets/images/products/wall-1073911562001-3.jpg",
+        "/assets/images/products/wall-1073911562001-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-1073911562001-1.jpg"
+    },
+    {
+      "id": "1061571194034",
+      "name": "Cloud Stone & Brass Cylindrical Wall Lamp",
+      "series": "wall",
+      "marble": true,
+      "model": "",
+      "summary": "Cylindrical cloud stone shade on a brass body — an energy-efficient bedside wall lamp with a light-luxury finish for hotel interiors.",
+      "facts": [
+        "Cloud stone shade",
+        "Brass body",
+        "Energy-saving LED",
+        "220–240 V",
+        "Hotel bedside"
+      ],
+      "keywords": [
+        "云石壁灯",
+        "铜制壁灯",
+        "圆柱壁灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-1061571194034.jpg",
+      "gallery": [
+        "/assets/images/products/wall-1061571194034-1.jpg",
+        "/assets/images/products/wall-1061571194034-2.jpg",
+        "/assets/images/products/wall-1061571194034-3.jpg",
+        "/assets/images/products/wall-1061571194034-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-1061571194034-1.jpg"
+    },
+    {
+      "id": "1060654471490",
+      "name": "Bedside Cloud Stone Wall Lamp",
+      "series": "wall",
+      "marble": true,
+      "model": "",
+      "summary": "A refined bedside cloud stone wall lamp (listed in several European markets) for hotels, guest rooms and apartment interiors.",
+      "facts": [
+        "Cloud stone shade",
+        "Wall mount",
+        "LED light source",
+        "220–240 V",
+        "Hotel / apartment"
+      ],
+      "keywords": [
+        "云石壁灯",
+        "床头壁灯",
+        "wall light",
+        "Wandleuchte",
+        "светильник"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-1060654471490.jpg",
+      "gallery": [
+        "/assets/images/products/wall-1060654471490-1.jpg",
+        "/assets/images/products/wall-1060654471490-2.jpg",
+        "/assets/images/products/wall-1060654471490-3.jpg",
+        "/assets/images/products/wall-1060654471490-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-1060654471490-1.jpg"
+    },
+    {
+      "id": "1059392457376",
+      "name": "Nordic Plaster & Stone Linear Wall Lamp",
+      "series": "wall",
+      "marble": true,
+      "model": "",
+      "summary": "Nordic-minimal linear wall lamp with plaster shade and natural stone accents — a statement piece for corridors and entryways.",
+      "facts": [
+        "Plaster shade",
+        "Natural stone accents",
+        "Brass fittings",
+        "LED light source",
+        "Linear / Nordic style"
+      ],
+      "keywords": [
+        "北欧壁灯",
+        "石膏壁灯",
+        "长条壁灯",
+        "水泥壁灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-1059392457376.jpg",
+      "gallery": [
+        "/assets/images/products/wall-1059392457376-1.jpg",
+        "/assets/images/products/wall-1059392457376-2.jpg",
+        "/assets/images/products/wall-1059392457376-3.jpg",
+        "/assets/images/products/wall-1059392457376-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-1059392457376-1.jpg"
+    },
+    {
+      "id": "1053385402310",
+      "name": "Italian Minimal Iron & Aluminum Wall Lamp",
+      "series": "wall",
+      "marble": false,
+      "model": "",
+      "summary": "Italian-minimal wall lamp with an iron shade and aluminum body for home corridors and living spaces.",
+      "facts": [
+        "Iron shade",
+        "Aluminum body",
+        "LED light source",
+        "220–240 V",
+        "Corridor / indoor"
+      ],
+      "keywords": [
+        "意式壁灯",
+        "极简壁灯",
+        "过道壁灯",
+        "铝制壁灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-1053385402310.jpg",
+      "gallery": [
+        "/assets/images/products/wall-1053385402310-1.jpg",
+        "/assets/images/products/wall-1053385402310-2.jpg",
+        "/assets/images/products/wall-1053385402310-3.jpg",
+        "/assets/images/products/wall-1053385402310-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-1053385402310-1.jpg"
+    },
+    {
+      "id": "1043663192964",
+      "name": "Multilingual Cloud Stone Wall Lamp",
+      "series": "wall",
+      "marble": true,
+      "model": "",
+      "summary": "A flexible cloud stone wall lamp offered for European and CIS markets (ES/RU/EN listings) for homes and hotel rooms.",
+      "facts": [
+        "Cloud stone elements",
+        "Wall mount",
+        "LED light source",
+        "220–240 V",
+        "Multi-market export"
+      ],
+      "keywords": [
+        "云石壁灯",
+        "lampara de pared",
+        "壁灯出口款"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-1043663192964.jpg",
+      "gallery": [
+        "/assets/images/products/wall-1043663192964-0.jpg",
+        "/assets/images/products/wall-1043663192964-2.jpg",
+        "/assets/images/products/wall-1043663192964-3.jpg",
+        "/assets/images/products/wall-1043663192964-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-1043663192964-0.jpg"
+    },
+    {
+      "id": "990589263928",
+      "name": "Minimal U-Shape LED Wall Sconce",
+      "series": "wall",
+      "marble": false,
+      "model": "",
+      "summary": "A slim U-shaped LED wall sconce for hotel guest rooms and living rooms — direct from the source factory.",
+      "facts": [
+        "U-shaped profile",
+        "LED light source",
+        "220–240 V",
+        "Hotel / living room",
+        "Factory direct"
+      ],
+      "keywords": [
+        "U形壁灯",
+        "极简壁灯",
+        "LED壁灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-990589263928.jpg",
+      "gallery": [
+        "/assets/images/products/wall-990589263928-1.jpg",
+        "/assets/images/products/wall-990589263928-2.jpg",
+        "/assets/images/products/wall-990589263928-3.jpg",
+        "/assets/images/products/wall-990589263928-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-990589263928-1.jpg"
+    },
+    {
+      "id": "951719650417",
+      "name": "Modern Iron Indoor Wall Lamp",
+      "series": "wall",
+      "marble": false,
+      "model": "",
+      "summary": "Modern, minimal indoor wall lamp with an iron body — a versatile fit for living rooms, bedrooms and hallways.",
+      "facts": [
+        "Iron body",
+        "LED light source",
+        "220–240 V",
+        "Living room / bedroom"
+      ],
+      "keywords": [
+        "铁艺壁灯",
+        "现代壁灯",
+        "室内壁灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-951719650417.jpg",
+      "gallery": [
+        "/assets/images/products/wall-951719650417-1.jpg",
+        "/assets/images/products/wall-951719650417-2.jpg",
+        "/assets/images/products/wall-951719650417-3.jpg",
+        "/assets/images/products/wall-951719650417-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-951719650417-1.jpg"
+    },
+    {
+      "id": "951254539526",
+      "name": "Adjustable LED Reading Wall Lamp",
+      "series": "wall",
+      "marble": false,
+      "model": "",
+      "summary": "An angle-adjustable LED reading wall lamp for hotel bedheads, guesthouses and apartments.",
+      "facts": [
+        "Angle adjustable",
+        "LED light source",
+        "220–240 V",
+        "Hotel / guesthouse"
+      ],
+      "keywords": [
+        "阅读壁灯",
+        "床头壁灯",
+        "可调壁灯",
+        "reading lamp"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-951254539526.jpg",
+      "gallery": [
+        "/assets/images/products/wall-951254539526-1.jpg",
+        "/assets/images/products/wall-951254539526-2.jpg",
+        "/assets/images/products/wall-951254539526-3.jpg",
+        "/assets/images/products/wall-951254539526-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-951254539526-1.jpg"
+    },
+    {
+      "id": "948600686951",
+      "name": "Modern Semi-Transparent Frame Wall Lamp",
+      "series": "wall",
+      "marble": false,
+      "model": "",
+      "summary": "A modern wall lamp with an iron frame and semi-transparent diffuser for even, glare-free indoor light.",
+      "facts": [
+        "Iron frame",
+        "Semi-transparent diffuser",
+        "High-efficiency LED",
+        "220–240 V",
+        "Indoor"
+      ],
+      "keywords": [
+        "现代壁灯",
+        "铁质壁灯",
+        "半透罩壁灯"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/wall-948600686951.jpg",
+      "gallery": [
+        "/assets/images/products/wall-948600686951-1.jpg",
+        "/assets/images/products/wall-948600686951-2.jpg",
+        "/assets/images/products/wall-948600686951-3.jpg",
+        "/assets/images/products/wall-948600686951-4.jpg"
+      ],
+      "hover": "/assets/images/products/wall-948600686951-1.jpg"
+    },
+    {
+      "id": "1064809466989",
+      "name": "Rectangular Textured-Glass Pendant",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH26709",
+      "summary": "A rectangular linear pendant in textured glass on a slim stainless-steel frame - made for dining tables, restaurants and villa interiors.",
+      "facts": [
+        "Textured glass shades",
+        "Stainless steel frame",
+        "Built-in LED, 220-240 V",
+        "Lengths 1200 / 1500 / 1800 mm",
+        "Suspension height adjustable"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/1064809466989-1.jpg",
+      "hover": "/assets/images/products/1064809466989-2.jpg",
+      "gallery": [
+        "/assets/images/products/1064809466989-2.jpg",
+        "/assets/images/products/1064809466989-3.jpg",
+        "/assets/images/products/1064809466989-4.jpg"
+      ],
+      "kw": [
+        "textured glass pendant",
+        "rectangular chandelier",
+        "linear dining pendant",
+        "玻璃吊灯"
+      ]
+    },
+    {
+      "id": "1064776886330",
+      "name": "Wavy Smoke-Glass Linear Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH26701",
+      "summary": "A wavy smoke-glass linear chandelier built for hotel restaurants and villa dining rooms - made to the length of your table or counter.",
+      "facts": [
+        "Wavy smoke glass",
+        "Stainless steel frame",
+        "Built-in LED, 220-240 V",
+        "Linear, made to length",
+        "Custom sizes available"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/1064776886330-1.jpg",
+      "hover": "/assets/images/products/1064776886330-2.jpg",
+      "gallery": [
+        "/assets/images/products/1064776886330-2.jpg",
+        "/assets/images/products/1064776886330-3.jpg",
+        "/assets/images/products/1064776886330-4.jpg",
+        "/assets/images/products/1064776886330-5.jpg"
+      ],
+      "kw": [
+        "smoke glass chandelier",
+        "linear pendant",
+        "hotel restaurant lighting",
+        "波浪玻璃吊灯"
+      ]
+    },
+    {
+      "id": "1063997067978",
+      "name": "Ring Crystal Chandelier",
+      "series": "crystal",
+      "marble": false,
+      "model": "AH26706",
+      "summary": "A light-luxury ring chandelier in hand-finished crystal glass - for hotel lobbies, restaurants and villa living rooms.",
+      "facts": [
+        "Crystal glass",
+        "Stainless steel frame",
+        "Built-in LED, 220-240 V",
+        "Ring form",
+        "Custom sizes available"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/1063997067978-1.jpg",
+      "hover": "/assets/images/products/1063997067978-2.jpg",
+      "gallery": [
+        "/assets/images/products/1063997067978-2.jpg",
+        "/assets/images/products/1063997067978-3.jpg",
+        "/assets/images/products/1063997067978-4.jpg"
+      ],
+      "kw": [
+        "ring chandelier",
+        "crystal pendant",
+        "hotel lobby light",
+        "环形水晶吊灯"
+      ]
+    },
+    {
+      "id": "1063981255446",
+      "name": "Alabaster & Brass Linear Pendant",
+      "series": "pendant",
+      "marble": true,
+      "model": "OY-A8961",
+      "summary": "A brushed-metal linear pendant with natural alabaster shades - designed for hotel lobbies, reception desks and dining spaces.",
+      "facts": [
+        "Natural alabaster shades",
+        "Brushed metal body",
+        "LED light source, 220-240 V",
+        "Linear bar form",
+        "5 kg"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/1063981255446-1.jpg",
+      "hover": "/assets/images/products/1063981255446-2.jpg",
+      "gallery": [
+        "/assets/images/products/1063981255446-2.jpg",
+        "/assets/images/products/1063981255446-3.jpg",
+        "/assets/images/products/1063981255446-4.jpg"
+      ],
+      "kw": [
+        "alabaster pendant",
+        "brass linear light",
+        "hotel reception light",
+        "云石长条吊灯"
+      ]
+    },
+    {
+      "id": "1062790892984",
+      "name": "Round K9 Crystal Chandelier",
+      "series": "crystal",
+      "marble": false,
+      "model": "AH26602",
+      "summary": "A round crystal chandelier on copper-tone plated hardware - for villas, show homes and project living rooms.",
+      "facts": [
+        "K9 crystal",
+        "Copper-tone plated hardware",
+        "E14 x 12 (12-light)",
+        "Diameter 1000 mm",
+        "Suspension 1000 mm"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/1062790892984-1.jpg",
+      "hover": "/assets/images/products/1062790892984-2.jpg",
+      "gallery": [
+        "/assets/images/products/1062790892984-2.jpg",
+        "/assets/images/products/1062790892984-3.jpg",
+        "/assets/images/products/1062790892984-4.jpg",
+        "/assets/images/products/1062790892984-5.jpg"
+      ],
+      "kw": [
+        "round crystal chandelier",
+        "k9 crystal",
+        "project chandelier",
+        "圆形水晶吊灯"
+      ]
+    },
+    {
+      "id": "1058047574949",
+      "name": "Leather & Alabaster Six-Light Pendant",
+      "series": "pendant",
+      "marble": true,
+      "summary": "A six-light alabaster pendant on a brass body with leather detailing - for living rooms, dining halls and hospitality suites.",
+      "facts": [
+        "Natural alabaster (stone) shades",
+        "Brass body with leather strap",
+        "Six lights",
+        "Dia 50 / 60 / 80 cm",
+        "220-240 V"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/1058047574949-1.jpg",
+      "hover": "/assets/images/products/1058047574949-2.jpg",
+      "gallery": [
+        "/assets/images/products/1058047574949-2.jpg",
+        "/assets/images/products/1058047574949-3.jpg",
+        "/assets/images/products/1058047574949-4.jpg"
+      ],
+      "model": "",
+      "kw": [
+        "alabaster pendant",
+        "leather pendant light",
+        "stone chandelier",
+        "云石吊灯"
+      ]
+    },
+    {
+      "id": "994353407584",
+      "name": "Minimal Crystal Linear Pendant",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-68005",
+      "summary": "A slim crystal linear pendant that can be mounted flush or suspended - a clean fit for dining rooms, kitchens and hotel interiors.",
+      "facts": [
+        "Crystal shade",
+        "Stainless steel body",
+        "LED light source, 220-240 V",
+        "Linear form",
+        "Flush or suspended"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/994353407584-1.jpg",
+      "hover": "/assets/images/products/994353407584-2.jpg",
+      "gallery": [
+        "/assets/images/products/994353407584-2.jpg",
+        "/assets/images/products/994353407584-3.jpg",
+        "/assets/images/products/994353407584-4.jpg",
+        "/assets/images/products/994353407584-5.jpg"
+      ],
+      "kw": [
+        "crystal linear pendant",
+        "minimal pendant",
+        "flush ceiling light",
+        "线条吊灯"
+      ]
+    },
+    {
+      "id": "992907612226",
+      "name": "Multi-Head Acrylic Pendant",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH3563",
+      "summary": "A multi-head acrylic pendant on an iron body, flush-mount or suspended - for living rooms, dining areas and guest rooms.",
+      "facts": [
+        "Acrylic shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "Flush or suspended",
+        "Sizes D480 / D1200 mm"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/992907612226-1.jpg",
+      "hover": "/assets/images/products/992907612226-2.jpg",
+      "gallery": [
+        "/assets/images/products/992907612226-2.jpg",
+        "/assets/images/products/992907612226-3.jpg",
+        "/assets/images/products/992907612226-4.jpg"
+      ],
+      "kw": [
+        "acrylic pendant",
+        "multi head light",
+        "iron chandelier",
+        "亚克力吊灯"
+      ]
+    },
+    {
+      "id": "992889268721",
+      "name": "Multi-Head Acrylic Ceiling Light",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH3550",
+      "summary": "A multi-head acrylic fixture with 6 to 18 lights, mounted flush or suspended - a flexible choice for living rooms and hotel rooms.",
+      "facts": [
+        "Acrylic shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "6 / 9 / 12 / 15 / 18 heads",
+        "Flush or suspended"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/992889268721-1.jpg",
+      "hover": "/assets/images/products/992889268721-2.jpg",
+      "gallery": [
+        "/assets/images/products/992889268721-2.jpg",
+        "/assets/images/products/992889268721-3.jpg"
+      ],
+      "kw": [
+        "acrylic ceiling light",
+        "multi head chandelier",
+        "iron light",
+        "多头吸顶灯"
+      ]
+    },
+    {
+      "id": "992897996444",
+      "name": "Linear Multi-Head Acrylic Pendant",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH3551",
+      "summary": "A linear multi-head acrylic pendant in iron - for long dining tables, counters and restaurant banquettes.",
+      "facts": [
+        "Acrylic shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "Lengths 850 / 900 / 1200 mm",
+        "Flush or suspended"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/992897996444-1.jpg",
+      "hover": "/assets/images/products/992897996444-2.jpg",
+      "gallery": [
+        "/assets/images/products/992897996444-2.jpg",
+        "/assets/images/products/992897996444-3.jpg",
+        "/assets/images/products/992897996444-4.jpg",
+        "/assets/images/products/992897996444-5.jpg"
+      ],
+      "kw": [
+        "linear pendant",
+        "acrylic chandelier",
+        "dining table light",
+        "线条吊灯"
+      ]
+    },
+    {
+      "id": "992183253248",
+      "name": "Duplex Stairwell Crystal Chandelier",
+      "series": "crystal",
+      "marble": false,
+      "model": "AH3542",
+      "summary": "A large chandelier designed for duplex voids and stairwells - sized and hung to your ceiling height.",
+      "facts": [
+        "Crystal-effect acrylic",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "For double-height voids",
+        "Custom drop lengths"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/992183253248-1.jpg",
+      "hover": "/assets/images/products/992183253248-2.jpg",
+      "gallery": [
+        "/assets/images/products/992183253248-2.jpg",
+        "/assets/images/products/992183253248-3.jpg",
+        "/assets/images/products/992183253248-4.jpg",
+        "/assets/images/products/992183253248-5.jpg"
+      ],
+      "kw": [
+        "stairwell chandelier",
+        "duplex chandelier",
+        "villa lighting",
+        "复式楼吊灯"
+      ]
+    },
+    {
+      "id": "992142187104",
+      "name": "Single-Head Glass Pendant",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-3572",
+      "summary": "A single-head glass pendant with an acrylic shade - a clean, minimal light for kitchens, bars and bedside use.",
+      "facts": [
+        "Glass body",
+        "Acrylic shade",
+        "LED light source, 220-240 V",
+        "Single light",
+        "Flush or suspended"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/992142187104-1.jpg",
+      "hover": "/assets/images/products/992142187104-2.jpg",
+      "gallery": [
+        "/assets/images/products/992142187104-2.jpg",
+        "/assets/images/products/992142187104-3.jpg",
+        "/assets/images/products/992142187104-4.jpg"
+      ],
+      "kw": [
+        "single pendant",
+        "glass pendant light",
+        "minimal light",
+        "单头吊灯"
+      ]
+    },
+    {
+      "id": "992122293857",
+      "name": "Minimal Iron Linear Pendant",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH3526",
+      "summary": "A minimal iron linear pendant in three lengths - for dining tables, reception counters and hospitality interiors.",
+      "facts": [
+        "Iron body and shade",
+        "LED light source, 220-240 V",
+        "Lengths 400 / 600 / 800 mm",
+        "Linear form",
+        "220-240 V"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/992122293857-1.jpg",
+      "hover": "/assets/images/products/992122293857-2.jpg",
+      "gallery": [
+        "/assets/images/products/992122293857-2.jpg",
+        "/assets/images/products/992122293857-3.jpg",
+        "/assets/images/products/992122293857-4.jpg",
+        "/assets/images/products/992122293857-5.jpg"
+      ],
+      "kw": [
+        "iron pendant",
+        "linear light",
+        "minimal chandelier",
+        "铁艺吊灯"
+      ]
+    },
+    {
+      "id": "991998859217",
+      "name": "Large Custom Project Pendant",
+      "series": "custom",
+      "marble": false,
+      "model": "AH-3560",
+      "summary": "A large made-to-measure pendant for hotel halls and high-ceilinged public spaces - produced to your drawing.",
+      "facts": [
+        "Iron body",
+        "Acrylic shade",
+        "LED light source, 220-240 V",
+        "Non-standard sizes to order",
+        "Single light"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991998859217-1.jpg",
+      "hover": "/assets/images/products/991998859217-2.jpg",
+      "gallery": [
+        "/assets/images/products/991998859217-2.jpg",
+        "/assets/images/products/991998859217-3.jpg",
+        "/assets/images/products/991998859217-4.jpg",
+        "/assets/images/products/991998859217-5.jpg"
+      ],
+      "kw": [
+        "large project pendant",
+        "custom chandelier",
+        "hotel hall light",
+        "工程吊灯"
+      ]
+    },
+    {
+      "id": "991950165494",
+      "name": "Multi-Head Iron Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-8003",
+      "summary": "A multi-head iron chandelier with acrylic shades - for living and dining rooms in homes and hospitality projects.",
+      "facts": [
+        "Iron frame",
+        "Acrylic shades",
+        "LED light source, 220-240 V",
+        "Multi-head",
+        "Flush or suspended"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991950165494-1.jpg",
+      "hover": "/assets/images/products/991950165494-2.jpg",
+      "gallery": [
+        "/assets/images/products/991950165494-2.jpg",
+        "/assets/images/products/991950165494-3.jpg",
+        "/assets/images/products/991950165494-4.jpg",
+        "/assets/images/products/991950165494-5.jpg"
+      ],
+      "kw": [
+        "iron chandelier",
+        "multi head pendant",
+        "acrylic light",
+        "铁艺吊灯"
+      ]
+    },
+    {
+      "id": "991939429512",
+      "name": "Two-Tone Acrylic Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-2120",
+      "summary": "A multi-head chandelier in black or white with acrylic shades - a graphic, contemporary centrepiece.",
+      "facts": [
+        "Acrylic shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "Black or white finish",
+        "Multi-head"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991939429512-1.jpg",
+      "hover": "/assets/images/products/991939429512-2.jpg",
+      "gallery": [
+        "/assets/images/products/991939429512-2.jpg",
+        "/assets/images/products/991939429512-3.jpg",
+        "/assets/images/products/991939429512-4.jpg"
+      ],
+      "kw": [
+        "black chandelier",
+        "white pendant",
+        "acrylic light",
+        "黑白吊灯"
+      ]
+    },
+    {
+      "id": "991861081866",
+      "name": "Mountain-Form Acrylic Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-2107",
+      "summary": "A sculptural mountain-form acrylic chandelier in three lengths - for dining rooms and boutique hospitality spaces.",
+      "facts": [
+        "Acrylic shades",
+        "Iron and copper-tone frame",
+        "LED light source, 220-240 V",
+        "100 / 120 / 150 cm",
+        "Multi-head"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991861081866-1.jpg",
+      "hover": "/assets/images/products/991861081866-2.jpg",
+      "gallery": [
+        "/assets/images/products/991861081866-2.jpg",
+        "/assets/images/products/991861081866-3.jpg",
+        "/assets/images/products/991861081866-4.jpg",
+        "/assets/images/products/991861081866-5.jpg"
+      ],
+      "kw": [
+        "sculptural chandelier",
+        "acrylic pendant",
+        "山形吊灯"
+      ]
+    },
+    {
+      "id": "991857341422",
+      "name": "Gold Linear Acrylic Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-2104",
+      "summary": "A gold linear chandelier with dimmable, eye-care LED - seven or nine lights, sized for long dining tables.",
+      "facts": [
+        "Acrylic shades",
+        "Iron body, gold finish",
+        "Dimmable eye-care LED",
+        "L1200 mm / 7-light, L1560 mm / 9-light",
+        "220-240 V"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991857341422-1.jpg",
+      "hover": "/assets/images/products/991857341422-2.jpg",
+      "gallery": [
+        "/assets/images/products/991857341422-2.jpg",
+        "/assets/images/products/991857341422-3.jpg",
+        "/assets/images/products/991857341422-4.jpg",
+        "/assets/images/products/991857341422-5.jpg"
+      ],
+      "kw": [
+        "gold chandelier",
+        "linear pendant",
+        "dimmable led",
+        "金色长条吊灯"
+      ]
+    },
+    {
+      "id": "991848825720",
+      "name": "Petal Acrylic Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-2100",
+      "summary": "A petal-form acrylic chandelier in 12- or 16-light versions - a soft, layered centrepiece for living and dining rooms.",
+      "facts": [
+        "Petal-form acrylic shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "Dia 680 mm / 12-light, Dia 700 mm / 16-light",
+        "Multi-head"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991848825720-1.jpg",
+      "hover": "/assets/images/products/991848825720-2.jpg",
+      "gallery": [
+        "/assets/images/products/991848825720-2.jpg",
+        "/assets/images/products/991848825720-3.jpg",
+        "/assets/images/products/991848825720-4.jpg",
+        "/assets/images/products/991848825720-5.jpg"
+      ],
+      "kw": [
+        "petal chandelier",
+        "acrylic pendant",
+        "flower light",
+        "花瓣吊灯"
+      ]
+    },
+    {
+      "id": "991447678286",
+      "name": "Modular Acrylic Chandelier Collection",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH3565",
+      "summary": "A configurable acrylic chandelier family - several shapes and light counts from one series.",
+      "facts": [
+        "Acrylic shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "Multi-head",
+        "Several configurations"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991447678286-1.jpg",
+      "hover": "/assets/images/products/991447678286-2.jpg",
+      "gallery": [
+        "/assets/images/products/991447678286-2.jpg",
+        "/assets/images/products/991447678286-3.jpg",
+        "/assets/images/products/991447678286-4.jpg",
+        "/assets/images/products/991447678286-5.jpg"
+      ],
+      "kw": [
+        "modular chandelier",
+        "acrylic light",
+        "collection",
+        "LED吊灯"
+      ]
+    },
+    {
+      "id": "991406622480",
+      "name": "Six-Light Crystal-Effect Pendant",
+      "series": "crystal",
+      "marble": false,
+      "model": "AH3539",
+      "summary": "A six-light crystal-effect pendant in three variants - for dining rooms, bedrooms and hotel suites.",
+      "facts": [
+        "Crystal-effect shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "Six lights",
+        "Three variants A / B / C"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991406622480-1.jpg",
+      "hover": "/assets/images/products/991406622480-2.jpg",
+      "gallery": [
+        "/assets/images/products/991406622480-2.jpg",
+        "/assets/images/products/991406622480-3.jpg",
+        "/assets/images/products/991406622480-4.jpg",
+        "/assets/images/products/991406622480-5.jpg"
+      ],
+      "kw": [
+        "crystal pendant",
+        "six light chandelier",
+        "hotel suite light",
+        "水晶吊灯"
+      ]
+    },
+    {
+      "id": "991095138659",
+      "name": "Hospitality Multi-Head Pendant",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-2109",
+      "summary": "A multi-head acrylic pendant made for tea houses, restaurants and hospitality interiors.",
+      "facts": [
+        "Acrylic shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "Multi-head",
+        "Suited to hospitality"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991095138659-1.jpg",
+      "hover": "/assets/images/products/991095138659-2.jpg",
+      "gallery": [
+        "/assets/images/products/991095138659-2.jpg",
+        "/assets/images/products/991095138659-3.jpg",
+        "/assets/images/products/991095138659-4.jpg",
+        "/assets/images/products/991095138659-5.jpg"
+      ],
+      "kw": [
+        "hospitality pendant",
+        "restaurant light",
+        "acrylic chandelier",
+        "餐厅吊灯"
+      ]
+    },
+    {
+      "id": "991084896361",
+      "name": "Solid Copper Six-to-Ten-Light Chandelier",
+      "series": "crystal",
+      "marble": false,
+      "model": "AH-6645",
+      "summary": "A European-style chandelier in solid copper with glass shades - six, eight or ten lights for living rooms and entry halls.",
+      "facts": [
+        "Solid copper body",
+        "Glass shades",
+        "LED light source, 220-240 V",
+        "6 / 8 / 10 lights",
+        "European style"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/991084896361-1.jpg",
+      "hover": "/assets/images/products/991084896361-2.jpg",
+      "gallery": [
+        "/assets/images/products/991084896361-2.jpg",
+        "/assets/images/products/991084896361-3.jpg",
+        "/assets/images/products/991084896361-4.jpg",
+        "/assets/images/products/991084896361-5.jpg"
+      ],
+      "kw": [
+        "copper chandelier",
+        "european pendant",
+        "crystal light",
+        "全铜吊灯"
+      ]
+    },
+    {
+      "id": "990526103918",
+      "name": "Iron & Acrylic Pendant Range",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-3212",
+      "summary": "A coordinated iron and acrylic range - pendant, wall, table and floor versions in two sizes.",
+      "facts": [
+        "Iron and stainless steel",
+        "Acrylic shades",
+        "LED light source, 220-240 V",
+        "Pendant Dia 350 / 450 mm",
+        "Wall, table and floor versions"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/990526103918-1.jpg",
+      "hover": "/assets/images/products/990526103918-2.jpg",
+      "gallery": [
+        "/assets/images/products/990526103918-2.jpg",
+        "/assets/images/products/990526103918-3.jpg",
+        "/assets/images/products/990526103918-4.jpg"
+      ],
+      "kw": [
+        "lighting range",
+        "iron pendant",
+        "acrylic light",
+        "灯具系列"
+      ]
+    },
+    {
+      "id": "990520507584",
+      "name": "Six-to-Nine-Light Acrylic Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-2105",
+      "summary": "A six- or nine-light acrylic chandelier for show homes, villas and hospitality interiors.",
+      "facts": [
+        "Acrylic shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "6 or 9 lights",
+        "Flush or suspended"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/990520507584-1.jpg",
+      "hover": "/assets/images/products/990520507584-2.jpg",
+      "gallery": [
+        "/assets/images/products/990520507584-2.jpg",
+        "/assets/images/products/990520507584-3.jpg",
+        "/assets/images/products/990520507584-4.jpg",
+        "/assets/images/products/990520507584-5.jpg"
+      ],
+      "kw": [
+        "show home lighting",
+        "acrylic chandelier",
+        "villa light",
+        "样板房灯"
+      ]
+    },
+    {
+      "id": "990513959416",
+      "name": "Long Acrylic Linear Chandelier",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-2103",
+      "summary": "A long acrylic linear chandelier in two- or three-tier versions - for stairwells and dining halls.",
+      "facts": [
+        "Acrylic shades",
+        "Iron body",
+        "LED light source, 220-240 V",
+        "Long linear form",
+        "Two sizes"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/990513959416-1.jpg",
+      "hover": "/assets/images/products/990513959416-2.jpg",
+      "gallery": [
+        "/assets/images/products/990513959416-2.jpg",
+        "/assets/images/products/990513959416-3.jpg",
+        "/assets/images/products/990513959416-4.jpg"
+      ],
+      "kw": [
+        "long chandelier",
+        "linear acrylic light",
+        "stairwell light",
+        "长吊灯"
+      ]
+    },
+    {
+      "id": "990499389285",
+      "name": "American Country Single-Light Pendant",
+      "series": "pendant",
+      "marble": false,
+      "model": "AH-8827",
+      "summary": "A single-light copper pendant with a glass shade in six variants - for entryways, corridors and dining nooks.",
+      "facts": [
+        "Solid copper body",
+        "Glass shade",
+        "LED light source, 220-240 V",
+        "Single light",
+        "Six model variants"
+      ],
+      "moq": 1,
+      "image": "/assets/images/products/990499389285-1.jpg",
+      "gallery": [],
+      "kw": [
+        "copper pendant",
+        "country style light",
+        "single light",
+        "美式吊灯"
+      ],
+      "hover": ""
+    }
+  ],
+  "FACTORY": {
+    "heading": "Inside our Zhongshan workshop",
+    "note": "Design studio, production lines, quality control and warehouse — integrated in our own Zhongshan workshop.",
+    "images": [
+      {
+        "src": "/assets/images/factory/zone-design.jpg",
+        "alt": "Open-plan product design studio where Aoshahua engineers draw new luminaires",
+        "caption": "Product design studio"
+      },
+      {
+        "src": "/assets/images/factory/zone-production.jpg",
+        "alt": "Component production line in the Aoshahua Zhongshan workshop",
+        "caption": "Component production"
+      },
+      {
+        "src": "/assets/images/factory/factory-bending.jpg",
+        "alt": "Metal tube bending and forming on the workshop benches",
+        "caption": "Bending & forming"
+      },
+      {
+        "src": "/assets/images/factory/factory-assembly.jpg",
+        "alt": "Chandelier frames assembled in the Aoshahua assembly workshop",
+        "caption": "Assembly workshop"
+      },
+      {
+        "src": "/assets/images/factory/zone-qc.jpg",
+        "alt": "Quality inspection workstation where every fixture is checked",
+        "caption": "Quality inspection"
+      },
+      {
+        "src": "/assets/images/factory/zone-warehouse.jpg",
+        "alt": "Finished-goods storage with packed cartons on pallets",
+        "caption": "Finished-goods storage"
+      },
+      {
+        "src": "/assets/images/factory/factory-production.jpg",
+        "alt": "Workers export-packing finished lamps for shipment",
+        "caption": "Export packing"
+      }
+    ],
+    "expo": {
+      "heading": "Exhibitions & sister-brand showcases",
+      "lede": "Aoshahua and its sister brand Jingtai Lighting (晶太灯饰, trading as Uni-home) bring our crystal, marble and hand-blown glass collections to international lighting fairs — for hotel, villa, club and lighting-specialist buyers.",
+      "images": [
+        {
+          "src": "/assets/images/factory/expo-1.jpg",
+          "alt": "Aoshahua sister-brand trade fair booth with ornate crystal chandeliers",
+          "caption": "Jingtai Lighting · Canton Fair （NO.1）"
+        },
+        {
+          "src": "/assets/images/factory/expo-2.jpg",
+          "alt": "Jingtai Lighting exhibition booth with large crystal series and production process display",
+          "caption": "Jingtai Lighting · Canton Fair （NO.2）"
+        },
+        {
+          "src": "/assets/images/factory/expo-3.jpg",
+          "alt": "Uni-home exhibition booth featuring the hand-blown glass series",
+          "caption": "Jingtai Lighting · Canton Fair （NO.3）"
+        }
+      ]
+    },
+    "info": {
+      "mark": "5000 m²",
+      "desc": "In-house workshop — component finishing, assembly, quality control and export packing under one roof."
+    }
+  },
+  "COMPANY_LEAD": "Aoshahua Lighting is a source factory and own brand in Zhongshan, Guangdong, China. We design and produce crystal chandeliers, marble wall sconces, pendant lights and project fixtures for buyers in Europe, the Middle East, Southeast Asia and the Americas — backed by CCC and ISO 9000 certified quality and over a decade of export manufacturing.",
+  "WHY": [
+    {
+      "title": "Source Factory, No Middlemen",
+      "desc": "Design, R&D, production and sales run under one roof in Zhongshan — you buy at factory prices, not retail markups.",
+      "icon": "factory"
+    },
+    {
+      "title": "Own Registered Brand",
+      "desc": "Aoshahua is a registered trademark with export filing and customs-declaration credentials on file.",
+      "icon": "gem"
+    },
+    {
+      "title": "Sample & Bulk Orders",
+      "desc": "Sample orders are always welcome; production runs start from 1 piece and scale up to full containers.",
+      "icon": "layers"
+    },
+    {
+      "title": "Certified Quality",
+      "desc": "CCC and ISO 9000 certified production, with aging and function testing on every batch before packing.",
+      "icon": "badge"
+    },
+    {
+      "title": "OEM / ODM Service",
+      "desc": "We work from your drawings or samples — material selection, custom finishes and full turnkey production.",
+      "icon": "compass"
+    },
+    {
+      "title": "Export Experience",
+      "desc": "Shipping to Europe, the Middle East, Southeast Asia and the Americas; trusted by Amazon, eBay and AliExpress sellers.",
+      "icon": "globe"
+    }
+  ],
+  "PROCESS": [
+    {
+      "title": "Send Your Inquiry",
+      "desc": "Choose a product and send an enquiry with your quantity — or ask us to recommend from the 500+ model catalog.",
+      "image": "/assets/images/process/up-1788864531847.jpeg"
+    },
+    {
+      "title": "Sample & Confirm",
+      "desc": "Lock in specs: materials, finish, light color and voltage. Sampling available before bulk.",
+      "image": "/assets/images/process/up-1788864571911.jpeg"
+    },
+    {
+      "title": "Production & QC",
+      "desc": "In-house production with aging tests and functional checks on every batch.",
+      "image": "/assets/images/process/up-1788864613678.jpg"
+    },
+    {
+      "title": "Pack & Ship",
+      "desc": "Export packing with customs documentation, shipped door to port or to your forwarder.",
+      "image": "/assets/images/process/process-warehouse.jpg"
+    }
+  ],
+  "PROJECT_CASES": {
+    "heading": "Project cases",
+    "note": "A look at how our lighting is being used — hotel lobbies, boutique retail, exhibition builds and residential interiors. Every project below was designed and produced in our Zhongshan workshop.",
+    "cases": [
+    {
+      "slug": "geo-loop-ceiling",
+      "title": "Geometric loop ceiling lighting",
+      "category": "Commercial & Fitness",
+      "place": "City gym / wellness studio",
+      "image": "/assets/images/projects/geo-loop-city.jpg",
+      "caption": "Interlocking loop lines that read as one continuous light line from every angle.",
+      "detail": {
+        "client": "Fitness club & wellness studio — project reference",
+        "year": "2026",
+        "location": "City gym / wellness studio",
+        "images": [
+          "/assets/images/projects/geo-loop-city.jpg",
+          "/assets/images/projects/geo-loop-wellness.jpg"
+        ],
+        "overview": [
+          "The same geometric loop system, installed in two different fitness environments — a high-floor city gym and a garden-facing wellness studio. The curved LED lines are arranged in an interlocking ring-and-arc composition, so the ceiling reads as a single continuous light line from every angle in the room.",
+          "Because the pattern is modular, it scales from a single feature bay to an entire floor of the facility: both installations use the same fixture family, adjusted only for ceiling height and span."
+        ],
+        "specs": [
+          [
+            "Project type",
+            "Commercial interior ceiling lighting"
+          ],
+          [
+            "Locations",
+            "City gym + wellness studio"
+          ],
+          [
+            "Year",
+            "2026"
+          ],
+          [
+            "Fixtures",
+            "Geometric loop LED ceiling system"
+          ],
+          [
+            "Materials",
+            "Extruded aluminum profiles, LED line, powder-coated frame"
+          ],
+          [
+            "Lead time",
+            "5–8 weeks after approval"
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "hexagon-grid-ceiling",
+      "title": "Hexagon grid ceiling system",
+      "category": "Hospitality & Office",
+      "place": "Airport lounge / office corridor",
+      "image": "/assets/images/projects/hexagon-lounge.jpg",
+      "caption": "A modular honeycomb light field that scales from one panel to an entire corridor.",
+      "detail": {
+        "client": "Airport lounge & corporate office — project reference",
+        "year": "2026",
+        "location": "Airport lounge / office corridor",
+        "images": [
+          "/assets/images/projects/hexagon-lounge.jpg",
+          "/assets/images/projects/hexagon-corridor.jpg"
+        ],
+        "overview": [
+          "A hexagon grid ceiling system installed in two settings: an airport lounge overlooking the apron, and a long office corridor with full-height glazing. Black extruded frame modules carry white LED edges that form the honeycomb pattern, with the spacing tuned to the ceiling structure in each space.",
+          "The modular grid scales from a single feature panel to a full ceiling field. Warm accent lines along the perimeter tie the pattern to the joinery and keep long runs of the grid from reading cold."
+        ],
+        "specs": [
+          [
+            "Project type",
+            "Hospitality / office ceiling lighting"
+          ],
+          [
+            "Locations",
+            "Airport lounge + office corridor"
+          ],
+          [
+            "Year",
+            "2026"
+          ],
+          [
+            "Fixtures",
+            "Hexagon grid LED ceiling system"
+          ],
+          [
+            "Materials",
+            "Black anodized aluminum, LED edge modules"
+          ],
+          [
+            "Lead time",
+            "6–8 weeks after approval"
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "interlocking-ring-cluster",
+      "title": "Interlocking ring cluster chandelier",
+      "category": "Lobby & Retail",
+      "place": "Corporate lobby / boutique retail",
+      "image": "/assets/images/projects/ring-office.jpg",
+      "caption": "Black-framed LED rings hung in a staggered cluster — one sculptural piece, two rooms.",
+      "detail": {
+        "client": "Corporate lobby & boutique retail — project reference",
+        "year": "2026",
+        "location": "Corporate lobby / boutique retail",
+        "images": [
+          "/assets/images/projects/ring-office.jpg",
+          "/assets/images/projects/ring-retail.jpg"
+        ],
+        "overview": [
+          "One interlocking ring cluster, two rooms: a light stone corporate lobby and a dark, metallic boutique retail space. The black-framed LED rings are hung at staggered heights, which gives the piece its depth and makes it look different on approach from each side of the room.",
+          "The cluster works at two scales — a single statement grouping over a reception or sales floor, or a larger multi-unit field for higher ceilings. Frame color and ring diameter are matched to the interior during the design stage."
+        ],
+        "specs": [
+          [
+            "Project type",
+            "Lobby / retail statement lighting"
+          ],
+          [
+            "Locations",
+            "Corporate lobby + boutique retail"
+          ],
+          [
+            "Year",
+            "2026"
+          ],
+          [
+            "Fixtures",
+            "Interlocking ring cluster chandelier"
+          ],
+          [
+            "Materials",
+            "Black steel frame, LED ring, stainless cables"
+          ],
+          [
+            "Lead time",
+            "4–6 weeks after approval"
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "vortex-tube-chandelier",
+      "title": "Vortex LED tube chandelier",
+      "category": "Hotel & Cultural",
+      "place": "Hotel atrium / art museum",
+      "image": "/assets/images/projects/vortex-hotel.jpg",
+      "caption": "A spiral field of warm LED tubes, suspended from a circular opening above.",
+      "detail": {
+        "client": "Hotel atrium & art museum — project reference",
+        "year": "2026",
+        "location": "Hotel atrium / art museum rotunda",
+        "images": [
+          "/assets/images/projects/vortex-hotel.jpg",
+          "/assets/images/projects/vortex-museum.jpg"
+        ],
+        "overview": [
+          "The vortex chandelier hangs from a circular opening in the ceiling — first in a double-height hotel atrium, then in a museum rotunda. Hundreds of warm LED tubes are suspended on fine cables in a loose spiral, so the installation reads as a slow current of light rather than a solid form.",
+          "The same system was scaled between the two spaces: the hotel version fills a wider atrium opening, while the museum version is pulled tighter and lower to sit with the gallery below. Cable spacing and tube length are set per ceiling height."
+        ],
+        "specs": [
+          [
+            "Project type",
+            "Double-height statement lighting"
+          ],
+          [
+            "Locations",
+            "Hotel atrium + museum rotunda"
+          ],
+          [
+            "Year",
+            "2026"
+          ],
+          [
+            "Fixtures",
+            "Vortex LED tube chandelier"
+          ],
+          [
+            "Materials",
+            "Warm LED tubes, stainless steel cables, brass ceiling plate"
+          ],
+          [
+            "Lead time",
+            "8–10 weeks after approval"
+          ]
+        ]
+      }
+    }
+  ]
+  },
+  "MOQ_NOTE": "Every piece is made to order for your project, from a single unit. Send an enquiry and our export team will quote your specifications, quantity and destination — custom sizes, finishes and volumes are always welcome."
+}
