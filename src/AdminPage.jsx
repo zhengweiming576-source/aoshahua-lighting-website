@@ -1056,6 +1056,9 @@ export default function AdminPage() {
             <h1>询盘管理</h1>
           </div>
           <div className="admin__actions">
+            <a type="button" className="btn btn--ghost btn--sm" href="/editor">
+              网站编辑
+            </a>
             <button type="button" className="btn btn--ghost btn--sm" onClick={load} disabled={loading}>
               <RefreshCw size={14} /> {loading ? '加载中…' : '刷新'}
             </button>
