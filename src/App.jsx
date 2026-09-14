@@ -59,6 +59,7 @@ import {
 } from './Cart';
 import { clearFocusedProduct, onFocusProduct, productIdFromUrl } from './productFocus';
 import AdminPage from './AdminPage';
+import SiteContentEditor from './SiteContentEditor';
 import MetaCallback from './MetaCallback';
 
 // "Get a quote" opens WhatsApp with a short prefilled message, so a buyer lands
@@ -1426,6 +1427,7 @@ export default function App() {
 
   if (legalDoc) return <LegalPage doc={legalDoc} />;
   if (route === '/admin') return <AdminPage />;
+  if (route === '/editor' || route === '/admin/editor') return <SiteContentEditor />;
   if (route === '/meta-callback') return <MetaCallback />;
 
   // Projects index: /projects (all-case directory)

@@ -2,6 +2,46 @@
    Aoshahua Lighting — catalog-first design (NYRA-style collection,
    warm-white + champagne-gold palette, user-confirmed 2026-09-08)
    ============================================================ */
+
+/* Owner-only online content editor */
+.content-editor { min-height: 100vh; background: #17130d; color: #f8f2e8; padding: 32px clamp(18px, 5vw, 72px) 72px; }
+.content-editor--login { display: grid; place-items: center; padding: 24px; }
+.content-editor__login-card, .content-editor__panel, .content-editor__notice { background: #211b12; border: 1px solid rgba(226, 198, 139, .24); border-radius: 18px; box-shadow: 0 18px 60px rgba(0,0,0,.22); }
+.content-editor__login-card { width: min(440px, 100%); padding: 34px; }
+.content-editor__header { max-width: 1240px; margin: 0 auto 26px; display: flex; align-items: end; justify-content: space-between; gap: 20px; }
+.content-editor__header h1, .content-editor__login-card h1, .content-editor__notice h1 { margin: 0; font: 600 clamp(26px, 3vw, 40px)/1.1 Georgia, serif; }
+.content-editor__kicker { margin: 0 0 8px; color: #d6ae69; font: 700 11px/1.2 system-ui, sans-serif; letter-spacing: .16em; }
+.content-editor__muted, .content-editor__loading, .content-editor__notice p { color: #c8bca8; line-height: 1.65; }
+.content-editor__actions { display: flex; flex-wrap: wrap; gap: 9px; justify-content: end; }
+.content-editor__ghost, .content-editor__primary { min-height: 42px; padding: 0 15px; border-radius: 9px; border: 1px solid rgba(226, 198, 139, .32); display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 650; cursor: pointer; text-decoration: none; }
+.content-editor__ghost { background: transparent; color: #f8f2e8; }
+.content-editor__primary { background: #d6ae69; color: #21170b; border-color: #d6ae69; }
+.content-editor__primary:disabled { opacity: .55; cursor: wait; }
+.content-editor__layout { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 22px; align-items: start; }
+.content-editor__nav { display: grid; gap: 7px; position: sticky; top: 20px; }
+.content-editor__nav button { text-align: left; padding: 13px 15px; border-radius: 10px; border: 1px solid transparent; background: transparent; color: #c8bca8; cursor: pointer; font-size: 15px; }
+.content-editor__nav button:hover, .content-editor__nav button.is-active { background: #2e2518; color: #fff9ed; border-color: rgba(226, 198, 139, .26); }
+.content-editor__panel { padding: clamp(20px, 3vw, 34px); }
+.content-editor__panel-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; border-bottom: 1px solid rgba(226, 198, 139, .16); padding-bottom: 18px; margin-bottom: 22px; }
+.content-editor__panel-head h2 { margin: 0; font-size: 25px; }
+.content-editor__saved { color: #a99a84; font-size: 13px; }
+.content-editor__field { display: grid; gap: 7px; margin: 0 0 18px; }
+.content-editor__field > span { color: #f2dfbd; font-weight: 650; }
+.content-editor__field input, .content-editor__field textarea { width: 100%; box-sizing: border-box; padding: 12px 13px; border: 1px solid rgba(226, 198, 139, .28); border-radius: 9px; background: #17130d; color: #fff9ed; font: inherit; resize: vertical; }
+.content-editor__field input:focus, .content-editor__field textarea:focus { outline: 2px solid #d6ae69; outline-offset: 1px; }
+.content-editor__field small { color: #a99a84; }
+.content-editor__group, .content-editor__product { border: 1px solid rgba(226, 198, 139, .16); border-radius: 12px; padding: 18px; margin-bottom: 18px; }
+.content-editor__group h3, .content-editor__product h3 { margin: 0 0 15px; color: #f2dfbd; }
+.content-editor__product { display: grid; grid-template-columns: 116px 1fr; gap: 18px; }
+.content-editor__product-img { width: 116px; height: 116px; border-radius: 8px; overflow: hidden; background: #17130d; }
+.content-editor__product-img img { width: 100%; height: 100%; object-fit: cover; }
+.content-editor__product-fields .content-editor__field:last-child { margin-bottom: 0; }
+.content-editor__error, .content-editor__success { padding: 12px 14px; border-radius: 9px; margin: 18px 0 0; }
+.content-editor__error { color: #ffb4a8; background: rgba(139, 37, 28, .22); }
+.content-editor__success { color: #bce7c6; background: rgba(33, 108, 62, .22); display: flex; gap: 8px; align-items: center; }
+.content-editor__bottom-save { margin-top: 24px; }
+.content-editor__notice { width: min(560px, 100%); margin: 12vh auto; padding: 34px; }
+@media (max-width: 760px) { .content-editor__header, .content-editor__panel-head { align-items: start; flex-direction: column; } .content-editor__actions { justify-content: start; } .content-editor__layout { grid-template-columns: 1fr; } .content-editor__nav { position: static; display: flex; overflow-x: auto; } .content-editor__nav button { white-space: nowrap; } .content-editor__product { grid-template-columns: 1fr; } }
 :root {
   --bg: #fbf8f1;
   --bg-tint: #f3ecdd;
