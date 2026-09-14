@@ -9,7 +9,7 @@ const projectRoot = fileURLToPath(new URL('.', import.meta.url));
 // Emit real static files for the legal pages, so each one resolves both on
 // hosts that serve a directory index (…/privacy-policy/index.html) and on
 // hosts that only fall back to the SPA entry. The public URL stays clean.
-const LEGAL_DIRS = ['privacy-policy', 'terms-of-service', 'data-deletion', 'admin'];
+const LEGAL_DIRS = ['privacy-policy', 'terms-of-service', 'data-deletion', 'admin', 'editor'];
 
 function emitLegalPages() {
   return {
