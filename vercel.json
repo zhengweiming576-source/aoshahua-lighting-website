@@ -5,6 +5,10 @@
     {
       "source": "/supabase/:path*",
       "destination": "https://vymwuiqttbpusfbzirkc.supabase.co/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
